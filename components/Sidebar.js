@@ -6,6 +6,8 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 
 
+
+
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
@@ -24,11 +26,11 @@ export default function Sidebar () {
   return (
     <div className={classes.root}>
       <List component="nav" aria-label="main mailbox folders">
-        
+     
         <ListItemLink href="/index">    
           <ListItemText primary="Главная" />
-          
-                  </ListItemLink>
+         
+                            </ListItemLink>
                   <ListItemLink href="/about">    
           <ListItemText primary="О нас" />
           
