@@ -10,9 +10,9 @@ import Typography from '@material-ui/core/Typography';
 import Link from 'next/link';
 
 const useStyles = makeStyles({
-    //card: {
-      //  maxWidth: 345,
-    //  },
+    card: {
+      maxWidth: 345,
+      },
   media: {
     height: 140,
   },

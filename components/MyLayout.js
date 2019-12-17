@@ -1,4 +1,4 @@
-import Header from './Header'
+import Sidebar from './Sidebar'
 
 const layoutStyle = {
   margin: 20,
@@ -10,7 +10,7 @@ export default function Layout (props) {
   return (
 
     <div>
-         <Header />
+         <Sidebar />
     
     
      

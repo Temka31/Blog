@@ -1,18 +1,11 @@
-import Layout from '../components/MyLayout';
 import React from 'react';
 
-import NestedGrid from '../components/gri';
-
+import Razm from '../components/razmetka'
 
 
 const Index = props => (
-  
- <Layout>
    
-  <NestedGrid />
-  
-    
- </Layout>
+ <Razm />
   
 );
 

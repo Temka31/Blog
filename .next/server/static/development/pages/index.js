@@ -88,130 +88,107 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./components/Header.js":
-/*!******************************!*\
-  !*** ./components/Header.js ***!
-  \******************************/
+/***/ "./components/Sidebar.js":
+/*!*******************************!*\
+  !*** ./components/Sidebar.js ***!
+  \*******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Header; });
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Sidebar; });
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/Button */ "@material-ui/core/Button");
-/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _material_ui_core_ButtonGroup__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/ButtonGroup */ "@material-ui/core/ButtonGroup");
-/* harmony import */ var _material_ui_core_ButtonGroup__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_ButtonGroup__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "C:\\Users\\Admin\\my-app\\123\\components\\Header.js";
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/styles */ "@material-ui/core/styles");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _material_ui_core_List__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/List */ "@material-ui/core/List");
+/* harmony import */ var _material_ui_core_List__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_List__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _material_ui_core_ListItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/ListItem */ "@material-ui/core/ListItem");
+/* harmony import */ var _material_ui_core_ListItem__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_ListItem__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/ListItemText */ "@material-ui/core/ListItemText");
+/* harmony import */ var _material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_5__);
+
+var _jsxFileName = "C:\\Users\\Admin\\my-app\\123\\components\\Sidebar.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
 
-function Header() {
+
+const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["makeStyles"])(theme => ({
+  root: {
+    width: '100%',
+    maxWidth: 360,
+    backgroundColor: theme.palette.background.paper
+  }
+}));
+
+function ListItemLink(props) {
+  return __jsx(_material_ui_core_ListItem__WEBPACK_IMPORTED_MODULE_4___default.a, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    button: true,
+    component: "a"
+  }, props, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }));
+}
+
+function Sidebar() {
+  const classes = useStyles();
   return __jsx("div", {
+    className: classes.root,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 25
     },
     __self: this
-  }, __jsx(_material_ui_core_ButtonGroup__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    variant: "text",
-    color: "primary",
-    "aria-label": "text primary button group",
+  }, __jsx(_material_ui_core_List__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    component: "nav",
+    "aria-label": "main mailbox folders",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 26
     },
     __self: this
-  }, __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  }, __jsx(ListItemLink, {
+    href: "/index",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 28
     },
     __self: this
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    href: "/",
+  }, __jsx(_material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    primary: "\u0413\u043B\u0430\u0432\u043D\u0430\u044F",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 29
     },
     __self: this
-  }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }, "Home"))), __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: this
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_0___default.a, {
+  })), __jsx(ListItemLink, {
     href: "/about",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 32
     },
     __self: this
-  }, __jsx("a", {
+  }, __jsx(_material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    primary: "\u041E \u043D\u0430\u0441",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 33
     },
     __self: this
-  }, "About")))));
-}
-
-/***/ }),
-
-/***/ "./components/MyLayout.js":
-/*!********************************!*\
-  !*** ./components/MyLayout.js ***!
-  \********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Layout; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
-var _jsxFileName = "C:\\Users\\Admin\\my-app\\123\\components\\MyLayout.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-const layoutStyle = {
-  margin: 20,
-  padding: 20,
-  border: '1px solid #DDD'
-};
-function Layout(props) {
-  return __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  }, __jsx(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }), props.children);
+  }))));
 }
 
 /***/ }),
@@ -259,9 +236,9 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["makeStyles"])({
-  //card: {
-  //  maxWidth: 345,
-  //  },
+  card: {
+    maxWidth: 345
+  },
   media: {
     height: 140
   }
@@ -346,179 +323,170 @@ function MediaCard() {
 
 /***/ }),
 
-/***/ "./components/gri.js":
-/*!***************************!*\
-  !*** ./components/gri.js ***!
-  \***************************/
+/***/ "./components/main.js":
+/*!****************************!*\
+  !*** ./components/main.js ***!
+  \****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return NestedGrid; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Main; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core/styles */ "@material-ui/core/styles");
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/Paper */ "@material-ui/core/Paper");
-/* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/Grid */ "@material-ui/core/Grid");
-/* harmony import */ var _material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/card */ "./components/card.js");
-var _jsxFileName = "C:\\Users\\Admin\\my-app\\123\\components\\gri.js";
+/* harmony import */ var _material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core/Box */ "@material-ui/core/Box");
+/* harmony import */ var _material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _card__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./card */ "./components/card.js");
+var _jsxFileName = "C:\\Users\\Admin\\my-app\\123\\components\\main.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+function Main() {
+  return __jsx("div", {
+    style: {
+      width: '100%'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    display: "flex",
+    justifyContent: "space-between",
+    flexDirection: "row",
+    p: 1,
+    m: 1,
+    bgcolor: "background.paper",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    p: 1,
+    bgcolor: "grey.300",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, __jsx(_card__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  })), __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    p: 1,
+    bgcolor: "grey.300",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, __jsx(_card__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  })), __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    p: 1,
+    bgcolor: "grey.300",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }, __jsx(_card__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }))));
+}
+
+/***/ }),
+
+/***/ "./components/razmetka.js":
+/*!********************************!*\
+  !*** ./components/razmetka.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Razm; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core/Box */ "@material-ui/core/Box");
+/* harmony import */ var _material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Sidebar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Sidebar */ "./components/Sidebar.js");
+/* harmony import */ var _main__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./main */ "./components/main.js");
+var _jsxFileName = "C:\\Users\\Admin\\my-app\\123\\components\\razmetka.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
-
-const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["makeStyles"])(theme => ({
-  root: {
-    flexGrow: 1
-  },
-  paper: {
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary
-  }
-}));
-function NestedGrid() {
-  const classes = useStyles();
-
-  function FormRow() {
-    return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 24
-      },
-      __self: this
-    }, __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
-      item: true,
-      xs: 4,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 25
-      },
-      __self: this
-    }, __jsx(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      className: classes.paper,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 26
-      },
-      __self: this
-    }, __jsx(_components_card__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 27
-      },
-      __self: this
-    }))), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
-      item: true,
-      xs: 4,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 30
-      },
-      __self: this
-    }, __jsx(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      className: classes.paper,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 31
-      },
-      __self: this
-    }, __jsx(_components_card__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 32
-      },
-      __self: this
-    }))), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
-      item: true,
-      xs: 4,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 35
-      },
-      __self: this
-    }, __jsx(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      className: classes.paper,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 36
-      },
-      __self: this
-    }, __jsx(_components_card__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 37
-      },
-      __self: this
-    }))));
-  }
-
+function Razm() {
   return __jsx("div", {
-    className: classes.root,
+    style: {
+      width: '100%'
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 12
     },
     __self: this
-  }, __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    container: true,
-    spacing: 1,
+  }, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    display: "flex",
+    p: 1,
+    bgcolor: "background.paper",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 13
     },
     __self: this
-  }, __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    container: true,
-    item: true,
-    xs: 12,
-    spacing: 3,
+  }, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    p: 1,
+    width: "30%",
+    bgcolor: "grey.300",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 14
     },
     __self: this
-  }, __jsx(FormRow, {
+  }, __jsx(_Sidebar__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 15
     },
     __self: this
-  })), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    container: true,
-    item: true,
-    xs: 12,
-    spacing: 3,
+  })), __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    p: 1,
+    width: "100%",
+    bgcolor: "grey.300",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 17
     },
     __self: this
-  }, __jsx(FormRow, {
+  }, __jsx(_main__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 18
     },
     __self: this
-  })), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    container: true,
-    item: true,
-    xs: 12,
-    spacing: 3,
+  }), __jsx(_main__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
-    },
-    __self: this
-  }, __jsx(FormRow, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 19
     },
     __self: this
   }))));
@@ -633,6 +601,39 @@ module.exports = __webpack_require__(/*! core-js/library/fn/symbol/iterator */ "
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/weak-map */ "core-js/library/fn/weak-map");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _extends; });
+/* harmony import */ var _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js");
+/* harmony import */ var _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__);
+
+function _extends() {
+  _extends = _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default.a || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
 
 /***/ }),
 
@@ -2336,35 +2337,27 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/MyLayout */ "./components/MyLayout.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_gri__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/gri */ "./components/gri.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_razmetka__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/razmetka */ "./components/razmetka.js");
 var _jsxFileName = "C:\\Users\\Admin\\my-app\\123\\pages\\index.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-
-const Index = props => __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_0__["default"], {
+const Index = props => __jsx(_components_razmetka__WEBPACK_IMPORTED_MODULE_1__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 10
+    lineNumber: 8
   },
   __self: undefined
-}, __jsx(_components_gri__WEBPACK_IMPORTED_MODULE_2__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 12
-  },
-  __self: undefined
-}));
+});
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -2376,6 +2369,17 @@ module.exports = __webpack_require__(/*! C:\Users\Admin\my-app\123\pages\index.j
 
 /***/ }),
 
+/***/ "@material-ui/core/Box":
+/*!****************************************!*\
+  !*** external "@material-ui/core/Box" ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/Box");
+
+/***/ }),
+
 /***/ "@material-ui/core/Button":
 /*!*******************************************!*\
   !*** external "@material-ui/core/Button" ***!
@@ -2384,17 +2388,6 @@ module.exports = __webpack_require__(/*! C:\Users\Admin\my-app\123\pages\index.j
 /***/ (function(module, exports) {
 
 module.exports = require("@material-ui/core/Button");
-
-/***/ }),
-
-/***/ "@material-ui/core/ButtonGroup":
-/*!************************************************!*\
-  !*** external "@material-ui/core/ButtonGroup" ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@material-ui/core/ButtonGroup");
 
 /***/ }),
 
@@ -2453,25 +2446,36 @@ module.exports = require("@material-ui/core/CardMedia");
 
 /***/ }),
 
-/***/ "@material-ui/core/Grid":
+/***/ "@material-ui/core/List":
 /*!*****************************************!*\
-  !*** external "@material-ui/core/Grid" ***!
+  !*** external "@material-ui/core/List" ***!
   \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("@material-ui/core/Grid");
+module.exports = require("@material-ui/core/List");
 
 /***/ }),
 
-/***/ "@material-ui/core/Paper":
-/*!******************************************!*\
-  !*** external "@material-ui/core/Paper" ***!
-  \******************************************/
+/***/ "@material-ui/core/ListItem":
+/*!*********************************************!*\
+  !*** external "@material-ui/core/ListItem" ***!
+  \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("@material-ui/core/Paper");
+module.exports = require("@material-ui/core/ListItem");
+
+/***/ }),
+
+/***/ "@material-ui/core/ListItemText":
+/*!*************************************************!*\
+  !*** external "@material-ui/core/ListItemText" ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/ListItemText");
 
 /***/ }),
 
