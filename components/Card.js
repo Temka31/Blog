@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Link from 'next/link';
 
+
 const useStyles = makeStyles({
     card: {
       maxWidth: 345,
@@ -41,12 +42,15 @@ export default function MediaCard() {
       <CardActions>
         
         <Button size="small" color="primary">
-        <Link href="/post">
+        <Link href="/posts">
               <a>Подробнее</a>
               </Link>
 
         </Button>
       </CardActions>
     </Card>
+
+
   );
 }
+

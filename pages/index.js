@@ -1,11 +1,15 @@
 import React from 'react';
-
-import Razm from '../components/razmetka'
+import Main from '../components/main';
+import Layout from '../components/MyLayout';
 
 
 const Index = props => (
    
- <Razm />
+ //<Razm />
+ <Layout>
+     <Main/>
+     <Main/>
+ </Layout>
   
 );
 
