@@ -415,6 +415,7 @@ function Main(props) {
   return (//<div style={{ width: '100%' }}>
     __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1___default.a, {
       display: "flex",
+      flexWrap: "wrap",
       bgcolor: "background.paper",
       __source: {
         fileName: _jsxFileName,
@@ -424,7 +425,7 @@ function Main(props) {
     }, __jsx("ul", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 12
       },
       __self: this
     }, props.shows.map(show => __jsx(_Card__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -432,7 +433,7 @@ function Main(props) {
       show: show,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 13
+        lineNumber: 14
       },
       __self: this
     })))) // </div>
