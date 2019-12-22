@@ -9,7 +9,7 @@ export default function Layout(props) {
         <Box p={1} width="20%" bgcolor="grey.300">
         <Sidebar/>
         </Box>
-        <Box p={1} width="100%" flexWrap="wrap" flexDirection="row" bgcolor="grey.300">
+        <Box p={1} width="100%" flexWrap="wrap"  bgcolor="grey.300">
        
         {props.children}
         </Box>

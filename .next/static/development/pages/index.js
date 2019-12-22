@@ -48,13 +48,13 @@ function MediaCard(props) {
     className: classes.card,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 27
     },
     __self: this
   }, __jsx(_material_ui_core_CardActionArea__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 28
     },
     __self: this
   }, __jsx(_material_ui_core_CardMedia__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -63,13 +63,13 @@ function MediaCard(props) {
     title: "Contemplative Reptile",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 29
     },
     __self: this
   }), __jsx(_material_ui_core_CardContent__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 34
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -78,7 +78,7 @@ function MediaCard(props) {
     component: "h2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 35
     },
     __self: this
   }, props.show.name), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -87,13 +87,13 @@ function MediaCard(props) {
     component: "p",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 38
     },
     __self: this
   }, props.show.genres))), __jsx(_material_ui_core_CardActions__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 43
     },
     __self: this
   }, __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -101,20 +101,20 @@ function MediaCard(props) {
     color: "primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 45
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
     href: "/about",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 46
     },
     __self: this
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 47
     },
     __self: this
   }, "\u041F\u043E\u0434\u0440\u043E\u0431\u043D\u0435\u0435")))));
@@ -178,7 +178,6 @@ function Layout(props) {
     p: 1,
     width: "100%",
     flexWrap: "wrap",
-    flexDirection: "row",
     bgcolor: "grey.300",
     __source: {
       fileName: _jsxFileName,
@@ -309,7 +308,6 @@ function Main(props) {
   return (//<div style={{ width: '100%' }}>
     __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1__["default"], {
       display: "flex",
-      flexWrap: "wrap",
       bgcolor: "background.paper",
       __source: {
         fileName: _jsxFileName,
@@ -319,7 +317,7 @@ function Main(props) {
     }, __jsx("ul", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 13
+        lineNumber: 11
       },
       __self: this
     }, props.shows.map(show => __jsx(_Card__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -327,7 +325,7 @@ function Main(props) {
       show: show,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 13
       },
       __self: this
     })))) // </div>
@@ -21843,7 +21841,7 @@ Index.getInitialProps = async function () {
 
 /***/ }),
 
-/***/ 1:
+/***/ 0:
 /*!***********************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CAdmin%5Cmy-app%5C123%5Cpages%5Cindex.js ***!
   \***********************************************************************************************************************/
@@ -21866,5 +21864,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

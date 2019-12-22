@@ -5,9 +5,7 @@ import MediaCard from './Card'
 export default function Main(props) {
   return (
     //<div style={{ width: '100%' }}>
-      <Box display="flex" 
-      
-            flexWrap="wrap"
+      <Box display="flex"          
        bgcolor="background.paper">
         
           <ul>

@@ -56,7 +56,7 @@ function Layout(props) {
     p: 1,
     width: "100%",
     flexWrap: "wrap",
-    flexDirection: "row",
+    flexDirection: "column",
     bgcolor: "grey.300",
     __source: {
       fileName: _jsxFileName,
@@ -69,4 +69,4 @@ function Layout(props) {
 /***/ })
 
 })
-//# sourceMappingURL=index.js.c8c0c2de2787775ef704.hot-update.js.map
+//# sourceMappingURL=index.js.bb276b65fe79e05bc7d2.hot-update.js.map
