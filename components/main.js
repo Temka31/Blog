@@ -2,22 +2,22 @@ import React from 'react';
 import Box from '@material-ui/core/Box';
 import MediaCard from './Card'
 
-export default function Main() {
+export default function Main(props) {
   return (
-    <div style={{ width: '100%' }}>
-      <Box display="flex" justifyContent="space-between"
+    //<div style={{ width: '100%' }}>
+      <Box display="flex" 
+      
             flexWrap="wrap"
-      flexDirection="row" p={1} m={1} bgcolor="background.paper">
-        <Box m={1} bgcolor="grey.300">
-          <MediaCard/>
+       bgcolor="background.paper">
+        
+          <ul>
+        {props.shows.map(show => (
+          <MediaCard key={show.id} show={show} />
+        ))}
+      </ul>           
+             
         </Box>
-        <Box m={1} bgcolor="grey.300">
-          <MediaCard/>
-        </Box>
-        <Box m={1} bgcolor="grey.300">
-          <MediaCard/>
-        </Box>
-      </Box>
-    </div>
+      
+   // </div>
   );
 }

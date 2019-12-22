@@ -19,7 +19,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MediaCard() {
+export default function MediaCard(props) {
   const classes = useStyles();
 
   return (
@@ -32,17 +32,17 @@ export default function MediaCard() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Заголовок
+          {props.show.name}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Сюда должно загружаться описание
+            {props.show.genres}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
         
         <Button size="small" color="primary">
-        <Link href="/posts">
+        <Link href="/about">
               <a>Подробнее</a>
               </Link>
 

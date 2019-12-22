@@ -42,7 +42,7 @@ const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["
     height: 140
   }
 });
-function MediaCard() {
+function MediaCard(props) {
   const classes = useStyles();
   return __jsx(_material_ui_core_Card__WEBPACK_IMPORTED_MODULE_2__["default"], {
     className: classes.card,
@@ -81,7 +81,7 @@ function MediaCard() {
       lineNumber: 34
     },
     __self: this
-  }, "\u0417\u0430\u0433\u043E\u043B\u043E\u0432\u043E\u043A"), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, props.show.name), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_8__["default"], {
     variant: "body2",
     color: "textSecondary",
     component: "p",
@@ -90,7 +90,7 @@ function MediaCard() {
       lineNumber: 37
     },
     __self: this
-  }, "\u0421\u044E\u0434\u0430 \u0434\u043E\u043B\u0436\u043D\u043E \u0437\u0430\u0433\u0440\u0443\u0436\u0430\u0442\u044C\u0441\u044F \u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435"))), __jsx(_material_ui_core_CardActions__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, props.show.genres))), __jsx(_material_ui_core_CardActions__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 42
@@ -105,7 +105,7 @@ function MediaCard() {
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
-    href: "/posts",
+    href: "/about",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 45
@@ -154,7 +154,6 @@ function Layout(props) {
   }, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1__["default"], {
     display: "flex",
     p: 1,
-    bgcolor: "background.paper",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
@@ -162,7 +161,7 @@ function Layout(props) {
     __self: this
   }, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1__["default"], {
     p: 1,
-    width: "30%",
+    width: "20%",
     bgcolor: "grey.300",
     __source: {
       fileName: _jsxFileName,
@@ -178,6 +177,8 @@ function Layout(props) {
   })), __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1__["default"], {
     p: 1,
     width: "100%",
+    flexWrap: "wrap",
+    flexDirection: "row",
     bgcolor: "grey.300",
     __source: {
       fileName: _jsxFileName,
@@ -304,72 +305,34 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-function Main() {
-  return __jsx("div", {
-    style: {
-      width: '100%'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
-  }, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    display: "flex",
-    justifyContent: "space-between",
-    flexWrap: "wrap",
-    flexDirection: "row",
-    p: 1,
-    m: 1,
-    bgcolor: "background.paper",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    m: 1,
-    bgcolor: "grey.300",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }, __jsx(_Card__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  })), __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    m: 1,
-    bgcolor: "grey.300",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }, __jsx(_Card__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  })), __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    m: 1,
-    bgcolor: "grey.300",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
-  }, __jsx(_Card__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }))));
+function Main(props) {
+  return (//<div style={{ width: '100%' }}>
+    __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      display: "flex",
+      flexWrap: "wrap",
+      bgcolor: "background.paper",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      },
+      __self: this
+    }, __jsx("ul", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }, props.shows.map(show => __jsx(_Card__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      key: show.id,
+      show: show,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      },
+      __self: this
+    })))) // </div>
+
+  );
 }
 
 /***/ }),
@@ -17089,6 +17052,18 @@ var e,t=(e=__webpack_require__(/*! querystring */ "./node_modules/querystring-es
 
 /***/ }),
 
+/***/ "./node_modules/next/dist/build/polyfills/fetch/index.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/next/dist/build/polyfills/fetch/index.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* globals self */var fetch=self.fetch.bind(self);module.exports=fetch;module.exports.default=module.exports;
+
+/***/ }),
+
 /***/ "./node_modules/next/dist/build/polyfills/object-assign.js":
 /*!***********************************************************************************************************************!*\
   !*** delegated ./node_modules/next/dist/build/polyfills/object-assign.js from dll-reference dll_ef0ff7c60362f24a921f ***!
@@ -21831,38 +21806,44 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_main__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/main */ "./components/main.js");
 /* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/MyLayout */ "./components/MyLayout.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/next/dist/build/polyfills/fetch/index.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "C:\\Users\\Admin\\my-app\\123\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
-const Index = props => //<Razm />
-__jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_2__["default"], {
+
+const Index = props => __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_2__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 9
+    lineNumber: 8
   },
   __self: undefined
 }, __jsx(_components_main__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  shows: props.shows,
   __source: {
     fileName: _jsxFileName,
     lineNumber: 10
   },
   __self: undefined
-}), __jsx(_components_main__WEBPACK_IMPORTED_MODULE_1__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 11
-  },
-  __self: undefined
 }));
+
+Index.getInitialProps = async function () {
+  const res = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default()('https://api.tvmaze.com/search/shows?q=batman');
+  const data = await res.json();
+  console.log("Show data fetched. Count: ".concat(data.length));
+  return {
+    shows: data.map(entry => entry.show)
+  };
+};
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
 
 /***/ }),
 
-/***/ 0:
+/***/ 1:
 /*!***********************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CAdmin%5Cmy-app%5C123%5Cpages%5Cindex.js ***!
   \***********************************************************************************************************************/
@@ -21885,5 +21866,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
