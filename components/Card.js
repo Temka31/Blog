@@ -23,30 +23,32 @@ export default function MediaCard(props) {
   const classes = useStyles();
 
   return (
-    
     <Card className={classes.card}>
+      <Link href="/p/[id]" as={`/p/${props.show.id}`}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="https://www.ixbt.com/img/n1/news/2019/5/3/chrome-73-mode-sombre-android_large.jpg"
+          image={props.show.image.medium}
           title="Contemplative Reptile"
         />
         <CardContent>
+          
           <Typography gutterBottom variant="h5" component="h2">
           {props.show.name}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {props.show.genres}
+            {props.show.summary}
           </Typography>
         </CardContent>
       </CardActionArea>
+      </Link>
       <CardActions>
         
         <Button size="small" color="primary">
-        <Link href="/about">
-              <a>Подробнее</a>
+        <Link href="/p/[id]" as={`/p/${props.show.id}`}>
+              <a>Подробнее </a>
               </Link>
-
+              
         </Button>
       </CardActions>
     </Card>

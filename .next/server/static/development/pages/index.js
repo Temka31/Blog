@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -149,6 +149,14 @@ function MediaCard(props) {
     className: classes.card,
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
+    href: "/p/[id]",
+    as: `/p/${props.show.id}`,
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 27
     },
     __self: this
@@ -160,7 +168,7 @@ function MediaCard(props) {
     __self: this
   }, __jsx(_material_ui_core_CardMedia__WEBPACK_IMPORTED_MODULE_6___default.a, {
     className: classes.media,
-    image: "https://www.ixbt.com/img/n1/news/2019/5/3/chrome-73-mode-sombre-android_large.jpg",
+    image: props.show.image.medium,
     title: "Contemplative Reptile",
     __source: {
       fileName: _jsxFileName,
@@ -179,7 +187,7 @@ function MediaCard(props) {
     component: "h2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 36
     },
     __self: this
   }, props.show.name), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_8___default.a, {
@@ -188,13 +196,13 @@ function MediaCard(props) {
     component: "p",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 39
     },
     __self: this
-  }, props.show.genres))), __jsx(_material_ui_core_CardActions__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }, props.show.summary)))), __jsx(_material_ui_core_CardActions__WEBPACK_IMPORTED_MODULE_4___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 45
     },
     __self: this
   }, __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_7___default.a, {
@@ -202,23 +210,24 @@ function MediaCard(props) {
     color: "primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 47
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
-    href: "/about",
+    href: "/p/[id]",
+    as: `/p/${props.show.id}`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 48
     },
     __self: this
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 49
     },
     __self: this
-  }, "\u041F\u043E\u0434\u0440\u043E\u0431\u043D\u0435\u0435")))));
+  }, "\u041F\u043E\u0434\u0440\u043E\u0431\u043D\u0435\u0435 ")))));
 }
 
 /***/ }),
@@ -2327,7 +2336,7 @@ Index.getInitialProps = async function () {
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
