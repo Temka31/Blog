@@ -12,7 +12,7 @@ import Link from 'next/link';
 
 const useStyles = makeStyles({
     card: {
-      maxWidth: 345,
+      maxWidth: 300,
       },
   media: {
     height: 140,
@@ -37,7 +37,7 @@ export default function MediaCard(props) {
           {props.show.name}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {props.show.summary}
+            {props.show.genres}
           </Typography>
         </CardContent>
       </CardActionArea>

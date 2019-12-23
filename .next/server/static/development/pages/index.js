@@ -137,7 +137,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["makeStyles"])({
   card: {
-    maxWidth: 345
+    maxWidth: 300
   },
   media: {
     height: 140
@@ -199,7 +199,7 @@ function MediaCard(props) {
       lineNumber: 39
     },
     __self: this
-  }, props.show.summary)))), __jsx(_material_ui_core_CardActions__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }, props.show.genres)))), __jsx(_material_ui_core_CardActions__WEBPACK_IMPORTED_MODULE_4___default.a, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 45
@@ -421,19 +421,20 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function Main(props) {
   return (//<div style={{ width: '100%' }}>
-    __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    __jsx("ul", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1___default.a, {
       display: "flex",
       flexWrap: "wrap",
+      justifyContent: "space-around",
       bgcolor: "background.paper",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 8
-      },
-      __self: this
-    }, __jsx("ul", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 11
       },
       __self: this
     }, props.shows.map(show => __jsx(_Card__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -441,7 +442,7 @@ function Main(props) {
       show: show,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14
+        lineNumber: 15
       },
       __self: this
     })))) // </div>

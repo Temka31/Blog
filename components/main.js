@@ -5,17 +5,19 @@ import MediaCard from './Card'
 export default function Main(props) {
   return (
     //<div style={{ width: '100%' }}>
-      <Box display="flex"  flexWrap="wrap"
-             
-       bgcolor="background.paper">
+      
         
           <ul>
+            <Box display="flex"  flexWrap="wrap"
+             justifyContent="space-around"
+             bgcolor="background.paper">
         {props.shows.map(show => (
           <MediaCard key={show.id} show={show} />
         ))}
+        </Box>
       </ul>           
              
-        </Box>
+        
       
    // </div>
   );
