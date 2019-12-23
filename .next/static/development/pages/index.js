@@ -186,7 +186,6 @@ function Layout(props) {
   })), __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1__["default"], {
     p: 1,
     width: "100%",
-    flexWrap: "wrap",
     bgcolor: "grey.300",
     __source: {
       fileName: _jsxFileName,
@@ -21851,7 +21850,7 @@ Index.getInitialProps = async function () {
 
 /***/ }),
 
-/***/ 2:
+/***/ 0:
 /*!***********************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CAdmin%5Cmy-app%5C123%5Cpages%5Cindex.js ***!
   \***********************************************************************************************************************/
@@ -21874,5 +21873,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

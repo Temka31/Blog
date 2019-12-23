@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -288,7 +288,6 @@ function Layout(props) {
   })), __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1___default.a, {
     p: 1,
     width: "100%",
-    flexWrap: "wrap",
     bgcolor: "grey.300",
     __source: {
       fileName: _jsxFileName,
@@ -2336,7 +2335,7 @@ Index.getInitialProps = async function () {
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
