@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
+import Button from '@material-ui/core/Button';
 
 import ListItemText from '@material-ui/core/ListItemText';
 
@@ -26,6 +27,8 @@ export default function Sidebar () {
   return (
     <div className={classes.root}>
       <List component="nav" aria-label="main mailbox folders">
+
+        <Button color='primary' variant='contained'>ffgf</Button>
      
         <ListItemLink href="/index">    
           <ListItemText primary="Главная" />

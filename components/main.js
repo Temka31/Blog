@@ -4,11 +4,11 @@ import MediaCard from './Card'
 
 export default function Main(props) {
   return (
-    //<div style={{ width: '100%' }}>
+    <div style={{ width: '100%' }}>
       
         
           <ul>
-            <Box display="flex"  flexWrap="wrap"
+            <Box p={1} display="flex" flexWrap="wrap"
              justifyContent="space-around"
              bgcolor="background.paper">
         {props.shows.map(show => (
@@ -19,6 +19,6 @@ export default function Main(props) {
              
         
       
-   // </div>
+    </div>
   );
 }

@@ -8,11 +8,13 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Link from 'next/link';
+import Box from '@material-ui/core/Box';
 
 
 const useStyles = makeStyles({
     card: {
       maxWidth: 300,
+      height: '100%'
       },
   media: {
     height: 140,
@@ -23,6 +25,7 @@ export default function MediaCard(props) {
   const classes = useStyles();
 
   return (
+    <Box p={2} minWidth={300} width={'33%'}>
     <Card className={classes.card}>
       <Link href="/p/[id]" as={`/p/${props.show.id}`}>
       <CardActionArea>
@@ -52,7 +55,7 @@ export default function MediaCard(props) {
         </Button>
       </CardActions>
     </Card>
-
+    </Box>
 
   );
 }
