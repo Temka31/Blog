@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -261,8 +261,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _Sidebar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Sidebar */ "./components/Sidebar.js");
 /* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./header */ "./components/header.js");
+/* harmony import */ var _material_ui_core_TableFooter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/TableFooter */ "@material-ui/core/TableFooter");
+/* harmony import */ var _material_ui_core_TableFooter__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_TableFooter__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "/Users/tema/my-app/123/components/MyLayout.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -325,20 +328,44 @@ function Layout(props) {
     },
     __self: this
   })), __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    p: 1,
     display: "flex",
-    flexBasis: "100%",
     flexDirection: "column",
-    flexShrink: 1,
-    overflow: "auto",
-    flexGrow: 1,
-    bgcolor: 'grey.300',
+    flexWrap: "nowrap",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 18
     },
     __self: this
-  }, props.children)));
+  }, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    p: 1,
+    display: "flex",
+    flexBasis: "100%",
+    flexShrink: 2,
+    overflow: "auto",
+    flexGrow: 1,
+    bgcolor: 'grey.300',
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  }, props.children), __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    bgcolor: 'grey.300',
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, __jsx(_material_ui_core_TableFooter__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, "\u0422\u0423\u0422 \u0434\u043E\u043B\u0436\u043D\u043E \u0431\u044B\u0442\u044C \u043E\u0444\u043E\u0440\u043C\u043B\u0435\u043D\u0438\u0435 \u0444\u0443\u0442\u0435\u0440\u0430 2020 \u0433\u043E\u0434 \u0421\u043E\u0437\u0434\u0430\u0442\u0435\u043B\u044C \u0410\u0440\u0442\u0451\u043C")))));
 }
 
 /***/ }),
@@ -2479,7 +2506,7 @@ Index.getInitialProps = async function () {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -2609,6 +2636,17 @@ module.exports = require("@material-ui/core/ListItem");
 /***/ (function(module, exports) {
 
 module.exports = require("@material-ui/core/ListItemText");
+
+/***/ }),
+
+/***/ "@material-ui/core/TableFooter":
+/*!************************************************!*\
+  !*** external "@material-ui/core/TableFooter" ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/TableFooter");
 
 /***/ }),
 
