@@ -28,8 +28,8 @@ export default function Sidebar () {
     <div className={classes.root}>
       <List component="nav" aria-label="main mailbox folders">
 
-        <Button color='primary' variant='contained'>ffgf</Button>
-     
+        {/* <Button color='primary' variant='contained'>ffgf</Button> */}
+       
         <ListItemLink href="/index">    
           <ListItemText primary="Главная" />
          

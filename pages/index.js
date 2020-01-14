@@ -13,6 +13,7 @@ const Index = props => (
           <MediaCard key={show.id} show={show} />
         ))}
       </Box>   
+      
   </Layout>
   
 );
