@@ -5,6 +5,7 @@ import ListItem from '@material-ui/core/ListItem';
 import Button from '@material-ui/core/Button';
 
 import ListItemText from '@material-ui/core/ListItemText';
+import { Box } from '@material-ui/core';
 
 
 
@@ -13,6 +14,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
     maxWidth: 360,
+    minWidth: 120,
     backgroundColor: theme.palette.background.paper,
   },
 }));
@@ -25,7 +27,7 @@ export default function Sidebar () {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <Box className={classes.root}>
       <List component="nav" aria-label="main mailbox folders">
 
         {/* <Button color='primary' variant='contained'>ffgf</Button> */}
@@ -40,7 +42,7 @@ export default function Sidebar () {
                   </ListItemLink>
       </List>
       
-    </div>
+    </Box>
   );
 }
 
