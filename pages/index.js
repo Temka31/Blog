@@ -22,6 +22,7 @@ const Index = props => (
 
 
 Index.getInitialProps = async function() {
+  try{
     const res = await fetch('https://api.tvmaze.com/search/shows?q=batman');
     const data = await res.json();
   
@@ -30,6 +31,12 @@ Index.getInitialProps = async function() {
     return {
       shows: data.map(entry => entry.show)
     };
+  } catch {
+    return {
+      shows : []
+    }
+  }
+
   };
   
   export default Index;
