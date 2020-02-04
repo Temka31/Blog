@@ -34,7 +34,6 @@ const styles = {
     display: "flex",
     width: "20%",
     flexShrink: 1,
-    color: "grin"
   },
   mainmain: {
     display: "flex",
@@ -47,7 +46,7 @@ const styles = {
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
-    color: "grey.300"
+    color: "grey"
   },
 
   posts: {
@@ -56,7 +55,6 @@ const styles = {
     flexShrink: 1,
     overflow: "auto",
     flexGrow: 1,
-    background: "grey",
     height: "100%"
   }
 };
@@ -64,9 +62,10 @@ const styles = {
 export default function Layout(props) {
   return (
     <div style={styles.root}>
-      <header style={styles.header}>
+      {/* <header style={styles.header}>
         <Header />
-      </header>
+      </header> */}
+      <Header/>
       <div style={styles.main}>
         <div style={styles.sidebar}>
           <Sidebar />

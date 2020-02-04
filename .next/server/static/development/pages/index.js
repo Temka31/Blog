@@ -295,8 +295,7 @@ const styles = {
   sidebar: {
     display: "flex",
     width: "20%",
-    flexShrink: 1,
-    color: "grin"
+    flexShrink: 1
   },
   mainmain: {
     display: "flex",
@@ -308,7 +307,7 @@ const styles = {
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
-    color: "grey.300"
+    color: "grey"
   },
   posts: {
     display: "flex",
@@ -316,7 +315,6 @@ const styles = {
     flexShrink: 1,
     overflow: "auto",
     flexGrow: 1,
-    background: "grey",
     height: "100%"
   }
 };
@@ -325,14 +323,7 @@ function Layout(props) {
     style: styles.root,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
-    },
-    __self: this
-  }, __jsx("header", {
-    style: styles.header,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 64
     },
     __self: this
   }, __jsx(_header__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -341,45 +332,45 @@ function Layout(props) {
       lineNumber: 68
     },
     __self: this
-  })), __jsx("div", {
+  }), __jsx("div", {
     style: styles.main,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 69
     },
     __self: this
   }, __jsx("div", {
     style: styles.sidebar,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 70
     },
     __self: this
   }, __jsx(_Sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 71
     },
     __self: this
   })), __jsx("div", {
     style: styles.mainmain,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 73
     },
     __self: this
   }, __jsx("div", {
     style: styles.posts,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 74
     },
     __self: this
   }, props.children), __jsx("div", {
     style: styles.footer,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 75
     },
     __self: this
   }, "\u0422\u0423\u0422 \u0434\u043E\u043B\u0436\u043D\u043E \u0431\u044B\u0442\u044C \u043E\u0444\u043E\u0440\u043C\u043B\u0435\u043D\u0438\u0435 \u0444\u0443\u0442\u0435\u0440\u0430 2020 \u0433\u043E\u0434 \u0421\u043E\u0437\u0434\u0430\u0442\u0435\u043B\u044C \u0410\u0440\u0442\u0451\u043C"))));
@@ -515,10 +506,12 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 const styles = {
   root: {
-    flexGrow: 1,
     position: "static",
     height: '50px',
-    background: 'blue'
+    background: 'blue',
+    display: "flex",
+    flexDirection: "column",
+    flexWrap: "nowrap"
   },
   header: {
     height: '50px',
@@ -536,10 +529,10 @@ const styles = {
 };
 function Header() {
   return __jsx("header", {
-    style: styles.header,
+    style: styles.root,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 34
     },
     __self: this
   }, "News");

@@ -1,6 +1,7 @@
 import Layout from '../../components/MyLayout';
 import fetch from 'isomorphic-unfetch';
 import Box from '@material-ui/core/Box';
+import Click from '../../components/click'
 const Post = props => (
   <Layout>
     
@@ -12,6 +13,7 @@ const Post = props => (
             <img src={props.show.image.medium} width='300'/>
             <h1>{props.show.name}</h1>
             <p>{props.show.summary.replace(/<[/]?[pb]>/g, '')}</p>
+            <Click/>
        </Box>
     <Box display='flex'flexBasis='25%' >
       

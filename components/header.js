@@ -4,14 +4,17 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const styles = {
   root: {
-    flexGrow: 1,
     position:"static",
     height:'50px',
-    background:'blue'
+    background:'blue',
+    display: "flex",
+    flexDirection: "column",
+    flexWrap: "nowrap"
   },
   header: {   
     height:'50px',
-    background:'blue'
+    background:'blue',
+
   },
   title: {
     flexGrow: 1,
@@ -28,7 +31,7 @@ export default function Header() {
   
 
   return (
-    <header style={styles.header}>
+    <header style={styles.root}>
       News
           
         
