@@ -328,7 +328,7 @@ function Layout(props) {
       lineNumber: 66
     },
     __self: this
-  }, __jsx("div", {
+  }, __jsx("header", {
     style: styles.header,
     __source: {
       fileName: _jsxFileName,
@@ -513,15 +513,16 @@ var _jsxFileName = "/Users/tema/my-app/123/components/header.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["makeStyles"])(theme => ({
+const styles = {
   root: {
     flexGrow: 1,
     position: "static",
     height: '50px',
     background: 'blue'
   },
-  menuButton: {
-    marginRight: theme.spacing(2)
+  header: {
+    height: '50px',
+    background: 'blue'
   },
   title: {
     flexGrow: 1 // [theme.breakpoints.down('sm')]: {
@@ -532,14 +533,13 @@ const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["
     // }
 
   }
-}));
+};
 function Header() {
-  const classes = useStyles();
-  return __jsx("div", {
-    className: classes.root,
+  return __jsx("header", {
+    style: styles.header,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 31
     },
     __self: this
   }, "News");

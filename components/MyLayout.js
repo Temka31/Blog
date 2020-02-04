@@ -64,9 +64,9 @@ const styles = {
 export default function Layout(props) {
   return (
     <div style={styles.root}>
-      <div style={styles.header}>
+      <header style={styles.header}>
         <Header />
-      </div>
+      </header>
       <div style={styles.main}>
         <div style={styles.sidebar}>
           <Sidebar />

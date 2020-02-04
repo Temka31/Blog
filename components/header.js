@@ -2,15 +2,16 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 
-const useStyles = makeStyles(theme => ({
+const styles = {
   root: {
     flexGrow: 1,
     position:"static",
     height:'50px',
     background:'blue'
   },
-  menuButton: {
-    marginRight: theme.spacing(2),
+  header: {   
+    height:'50px',
+    background:'blue'
   },
   title: {
     flexGrow: 1,
@@ -21,16 +22,16 @@ const useStyles = makeStyles(theme => ({
     //   color:'red'
     // }
   },
-}));
+};
 
 export default function Header() {
-  const classes = useStyles();
+  
 
   return (
-    <div className={classes.root}>
+    <header style={styles.header}>
       News
           
         
-    </div>
+    </header>
   );
 }
