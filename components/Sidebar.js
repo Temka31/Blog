@@ -1,33 +1,63 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import Button from '@material-ui/core/Button';
 
 import ListItemText from '@material-ui/core/ListItemText';
-import { Box } from '@material-ui/core';
-
 
 
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    width: '100%',
-    maxWidth: 360,
-    minWidth: 120,
-    backgroundColor: theme.palette.background.paper,
-  },
-}));
+    desktop: {
+      width: '100%',
+      maxWidth: 360,
+      minWidth: 120,
+      backgroundColor: theme.palette.background.paper,
+      "@media only screen and (max-width: 768px)": {
+      display:'none'
+      },
+    },
+      mobile: {
+        width: '100%',
+        maxWidth: 360,
+        minWidth: 120,
+        backgroundColor: theme.palette.background.paper,
+        "@media only screen and (min-width: 768px)": {
+        display:'none'
+        
 
-function ListItemLink(props) {
-  return <ListItem button component="a" {...props} />;
-}
+    },}
+  }));
+  
+  function ListItemLink(props) {
+    return <ListItem button component="a" {...props} />;
+  }
 
-export default function Sidebar () {
+
+
+
+
+export default function Sidebar() {
   const classes = useStyles();
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClick = event => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
-    <Box className={classes.root}>
+
+  
+<div>
+<div className={classes.desktop}>
       <List component="nav" aria-label="main mailbox folders">
 
         {/* <Button color='primary' variant='contained'>ffgf</Button> */}
@@ -42,8 +72,29 @@ export default function Sidebar () {
                   </ListItemLink>
       </List>
       
-    </Box>
+    </div>
+
+
+
+    <div className={classes.mobile}>
+      <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+        Menu
+      </Button>
+      <Menu
+        id="simple-menu"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+      >
+        <ListItemLink href="/index"> 
+        <MenuItem onClick={handleClose}>Главная</MenuItem>
+        </ListItemLink>
+        <ListItemLink href="/about"> 
+        <MenuItem onClick={handleClose}>О нас</MenuItem>
+        </ListItemLink>
+      </Menu>
+    </div>
+    </div>
   );
 }
-
-

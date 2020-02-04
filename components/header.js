@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const styles = {
   root: {
+    flexShrink: 0,
     position:"static",
     height:'50px',
     background:'blue',
@@ -11,11 +12,8 @@ const styles = {
     flexDirection: "column",
     flexWrap: "nowrap"
   },
-  header: {   
-    height:'50px',
-    background:'blue',
-
-  },
+ 
+  
   title: {
     flexGrow: 1,
     // [theme.breakpoints.down('sm')]: {
@@ -33,8 +31,6 @@ export default function Header() {
   return (
     <header style={styles.root}>
       News
-          
-        
     </header>
   );
 }
