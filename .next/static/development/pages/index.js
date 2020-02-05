@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
 
-/***/ "./components/Card.js":
-/*!****************************!*\
-  !*** ./components/Card.js ***!
-  \****************************/
+/***/ "./components/MediaCard.js":
+/*!*********************************!*\
+  !*** ./components/MediaCard.js ***!
+  \*********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -23,7 +23,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _material_ui_core_Box__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/core/Box */ "./node_modules/@material-ui/core/esm/Box/index.js");
-var _jsxFileName = "/Users/tema/my-app/123/components/Card.js";
+var _jsxFileName = "/Users/tema/my-app/123/components/MediaCard.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -39,7 +39,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["makeStyles"])({
   card: {
     maxWidth: 300,
-    height: '100%'
+    height: "100%"
   },
   media: {
     height: 140
@@ -50,17 +50,17 @@ function MediaCard(props) {
   return __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_10__["default"], {
     p: 2,
     minWidth: 300,
-    width: '33%',
+    width: "33%",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 27
     },
     __self: this
   }, __jsx(_material_ui_core_Card__WEBPACK_IMPORTED_MODULE_2__["default"], {
     className: classes.card,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 28
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
@@ -68,13 +68,13 @@ function MediaCard(props) {
     as: "/p/".concat(props.show.id),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 29
     },
     __self: this
   }, __jsx(_material_ui_core_CardActionArea__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 30
     },
     __self: this
   }, __jsx(_material_ui_core_CardMedia__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -83,13 +83,13 @@ function MediaCard(props) {
     title: "Contemplative Reptile",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 31
     },
     __self: this
   }), __jsx(_material_ui_core_CardContent__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 36
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -98,7 +98,7 @@ function MediaCard(props) {
     component: "h2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 37
     },
     __self: this
   }, props.show.name), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -107,13 +107,13 @@ function MediaCard(props) {
     component: "p",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 40
     },
     __self: this
   }, props.show.genres)))), __jsx(_material_ui_core_CardActions__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 46
     },
     __self: this
   }, __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -121,7 +121,7 @@ function MediaCard(props) {
     color: "primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 47
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
@@ -129,13 +129,13 @@ function MediaCard(props) {
     as: "/p/".concat(props.show.id),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 48
     },
     __self: this
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 49
     },
     __self: this
   }, "\u041F\u043E\u0434\u0440\u043E\u0431\u043D\u0435\u0435 "))))));
@@ -157,8 +157,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Sidebar */ "./components/Sidebar.js");
 /* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./header */ "./components/header.js");
+/* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./footer */ "./components/footer.js");
 var _jsxFileName = "/Users/tema/my-app/123/components/MyLayout.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -190,27 +192,16 @@ var styles = {
     // }
 
   },
-  sidebar: {
-    display: "flex",
-    width: "20%",
-    flexShrink: 1
-  },
   mainmain: {
     display: "flex",
     flexDirection: "column",
     flexWrap: "nowrap",
     width: "100%"
   },
-  footer: {
-    display: "flex",
-    flexDirection: "row",
-    flexWrap: "wrap",
-    color: "grey"
-  },
   posts: {
     display: "flex",
     flexBasis: "100%",
-    flexShrink: 1,
+    flexShrink: 0,
     overflow: "auto",
     flexGrow: 1,
     height: "100%"
@@ -221,57 +212,49 @@ function Layout(props) {
     style: styles.root,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 54
     },
     __self: this
   }, __jsx(_header__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 55
     },
     __self: this
   }), __jsx("div", {
     style: styles.main,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
-    },
-    __self: this
-  }, __jsx("div", {
-    style: styles.sidebar,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 56
     },
     __self: this
   }, __jsx(_Sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 57
     },
     __self: this
-  })), __jsx("div", {
+  }), __jsx("div", {
     style: styles.mainmain,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 58
     },
     __self: this
   }, __jsx("div", {
     style: styles.posts,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 59
     },
     __self: this
-  }, props.children), __jsx("div", {
-    style: styles.footer,
+  }, props.children), __jsx(_footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 60
     },
     __self: this
-  }, "\u0422\u0423\u0422 \u0434\u043E\u043B\u0436\u043D\u043E \u0431\u044B\u0442\u044C \u043E\u0444\u043E\u0440\u043C\u043B\u0435\u043D\u0438\u0435 \u0444\u0443\u0442\u0435\u0440\u0430 2020 \u0433\u043E\u0434 \u0421\u043E\u0437\u0434\u0430\u0442\u0435\u043B\u044C \u0410\u0440\u0442\u0451\u043C"))));
+  }))));
 }
 
 /***/ }),
@@ -309,24 +292,28 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 
+
 var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_6__["makeStyles"])(function (theme) {
   return {
     desktop: {
-      width: '100%',
+      display: "flex",
+      flexShrink: 1,
+      width: "100%",
       maxWidth: 360,
-      minWidth: 120,
+      minWidth: 200,
       backgroundColor: theme.palette.background.paper,
       "@media only screen and (max-width: 768px)": {
-        display: 'none'
+        display: "none"
       }
     },
     mobile: {
-      width: '100%',
+      display: "flex",
+      flexShrink: 1,
+      width: "100%",
       maxWidth: 360,
-      minWidth: 120,
       backgroundColor: theme.palette.background.paper,
       "@media only screen and (min-width: 768px)": {
-        display: 'none'
+        display: "none"
       }
     }
   };
@@ -339,7 +326,7 @@ function ListItemLink(props) {
   }, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 36
     },
     __self: this
   }));
@@ -364,14 +351,14 @@ function Sidebar() {
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 52
     },
     __self: this
   }, __jsx("div", {
     className: classes.desktop,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 53
     },
     __self: this
   }, __jsx(_material_ui_core_List__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -379,42 +366,42 @@ function Sidebar() {
     "aria-label": "main mailbox folders",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 54
     },
     __self: this
   }, __jsx(ListItemLink, {
     href: "/index",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 55
     },
     __self: this
   }, __jsx(_material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_9__["default"], {
     primary: "\u0413\u043B\u0430\u0432\u043D\u0430\u044F",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 56
     },
     __self: this
   })), __jsx(ListItemLink, {
     href: "/about",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 58
     },
     __self: this
   }, __jsx(_material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_9__["default"], {
     primary: "\u041E \u043D\u0430\u0441",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 59
     },
     __self: this
   })))), __jsx("div", {
     className: classes.mobile,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 64
     },
     __self: this
   }, __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -423,7 +410,7 @@ function Sidebar() {
     onClick: handleClick,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 65
     },
     __self: this
   }, "Menu"), __jsx(_material_ui_core_Menu__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -434,38 +421,87 @@ function Sidebar() {
     onClose: handleClose,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 72
+    },
+    __self: this
+  }, __jsx(_material_ui_core_List__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    component: "nav",
+    "aria-label": "main mailbox folders",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79
     },
     __self: this
   }, __jsx(ListItemLink, {
     href: "/index",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 80
     },
     __self: this
   }, __jsx(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
     onClick: handleClose,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 81
     },
     __self: this
   }, "\u0413\u043B\u0430\u0432\u043D\u0430\u044F")), __jsx(ListItemLink, {
     href: "/about",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 83
     },
     __self: this
   }, __jsx(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
     onClick: handleClose,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 84
     },
     __self: this
-  }, "\u041E \u043D\u0430\u0441")))));
+  }, "\u041E \u043D\u0430\u0441"))))));
+}
+
+/***/ }),
+
+/***/ "./components/footer.js":
+/*!******************************!*\
+  !*** ./components/footer.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Footer; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/tema/my-app/123/components/footer.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+var styles = {
+  root: {
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap"
+  }
+};
+function Footer() {
+  return __jsx("footer", {
+    style: styles.root,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, __jsx("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, "\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0410\u0440\u0442\u0435\u043C\u0430"));
 }
 
 /***/ }),
@@ -482,29 +518,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Header; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/index.js");
 var _jsxFileName = "/Users/tema/my-app/123/components/header.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-
 var styles = {
   root: {
-    flexShrink: 0,
-    position: "static",
-    height: '50px',
-    background: 'blue',
     display: "flex",
+    position: "static",
+    flexShrink: 0,
+    height: "50px",
+    background: "blue",
     flexDirection: "column",
     flexWrap: "nowrap"
-  },
-  title: {
-    flexGrow: 1 // [theme.breakpoints.down('sm')]: {
-    //   color:'yellow'
-    // },
-    // "@media only screen and (max-width: 768px)": {
-    //   color:'red'
-    // }
-
   }
 };
 function Header() {
@@ -512,71 +537,16 @@ function Header() {
     style: styles.root,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 17
     },
     __self: this
-  }, "News");
-}
-
-/***/ }),
-
-/***/ "./components/main.js":
-/*!****************************!*\
-  !*** ./components/main.js ***!
-  \****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Main; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core/Box */ "./node_modules/@material-ui/core/esm/Box/index.js");
-/* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Card */ "./components/Card.js");
-var _jsxFileName = "/Users/tema/my-app/123/components/main.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-function Main(props) {
-  return __jsx("div", {
-    style: {
-      width: '100%'
-    },
+  }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 18
     },
     __self: this
-  }, __jsx("ul", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: this
-  }, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    p: 1,
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "space-around",
-    bgcolor: "background.paper",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }, props.shows.map(function (show) {
-    return __jsx(_Card__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      key: show.id,
-      show: show,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 15
-      },
-      __self: this
-    });
-  }))));
+  }, "News"));
 }
 
 /***/ }),
@@ -28034,12 +28004,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_main__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/main */ "./components/main.js");
-/* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/MyLayout */ "./components/MyLayout.js");
-/* harmony import */ var _material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/Box */ "./node_modules/@material-ui/core/esm/Box/index.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/next/dist/build/polyfills/fetch/index.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _components_Card__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Card */ "./components/Card.js");
+/* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/MyLayout */ "./components/MyLayout.js");
+/* harmony import */ var _material_ui_core_Box__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/Box */ "./node_modules/@material-ui/core/esm/Box/index.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/next/dist/build/polyfills/fetch/index.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_MediaCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/MediaCard */ "./components/MediaCard.js");
 
 var _jsxFileName = "/Users/tema/my-app/123/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
@@ -28049,31 +28018,30 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
-
 var Index = function Index(props) {
-  return __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  return __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 8
     },
     __self: this
-  }, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_3__["default"], {
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
     flexGrow: 1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 9
     },
     __self: this
   }, props.shows.map(function (show) {
-    return __jsx(_components_Card__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    return __jsx(_components_MediaCard__WEBPACK_IMPORTED_MODULE_5__["default"], {
       key: show.id,
       show: show,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 13
+        lineNumber: 11
       },
       __self: this
     });
@@ -28088,7 +28056,7 @@ Index.getInitialProps = function _callee() {
         case 0:
           _context.prev = 0;
           _context.next = 3;
-          return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5___default()('https://api.tvmaze.com/search/shows?q=batman'));
+          return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()("https://api.tvmaze.com/search/shows?q=batman"));
 
         case 3:
           res = _context.sent;

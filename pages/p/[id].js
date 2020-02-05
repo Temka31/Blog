@@ -1,25 +1,18 @@
-import Layout from '../../components/MyLayout';
-import fetch from 'isomorphic-unfetch';
-import Box from '@material-ui/core/Box';
-import Click from '../../components/click'
+import Layout from "../../components/MyLayout";
+import fetch from "isomorphic-unfetch";
+import Box from "@material-ui/core/Box";
+import Click from "../../components/click";
 const Post = props => (
   <Layout>
-    
-      <Box display='flex' flexBasis='25%'>
-      <input type="button" onclick="history.back(-2); return false;" value="Назад"/>
-
-       </Box>
-       <Box display='flex' flexBasis='50%' flexDirection = 'column' >  
-            <img src={props.show.image.medium} width='300'/>
-            <h1>{props.show.name}</h1>
-            <p>{props.show.summary.replace(/<[/]?[pb]>/g, '')}</p>
-            <Click/>
-       </Box>
-    <Box display='flex'flexBasis='25%' >
-      
+    <Box display="flex" flexBasis="25%"></Box>
+    <Box display="flex" flexBasis="50%" flexDirection="column">
+      <img src={props.show.image.medium} width="300" />
+      <h1>{props.show.name}</h1>
+      <p>{props.show.summary.replace(/<[/]?[pb]>/g, "")}</p>
+      <Click />
     </Box>
-    
-    </Layout>
+    <Box display="flex" flexBasis="25%"></Box>
+  </Layout>
 );
 
 Post.getInitialProps = async function(context) {
