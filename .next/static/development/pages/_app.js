@@ -2368,13 +2368,13 @@ function createBreakpoints(breakpoints) {
   }
 
   function between(start, end) {
-    var endIndex = keys.indexOf(end) + 1;
+    var endIndex = keys.indexOf(end);
 
-    if (endIndex === keys.length) {
+    if (endIndex === keys.length - 1) {
       return up(start);
     }
 
-    return "@media (min-width:".concat(values[start]).concat(unit, ") and ") + "(max-width:".concat(values[keys[endIndex]] - step / 100).concat(unit, ")");
+    return "@media (min-width:".concat(typeof values[start] === 'number' ? values[start] : start).concat(unit, ") and ") + "(max-width:".concat((endIndex !== -1 && typeof values[keys[endIndex + 1]] === 'number' ? values[keys[endIndex + 1]] : end) - step / 100).concat(unit, ")");
   }
 
   function only(key) {
@@ -2587,7 +2587,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _colors_indigo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../colors/indigo */ "./node_modules/@material-ui/core/esm/colors/indigo.js");
 /* harmony import */ var _colors_pink__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../colors/pink */ "./node_modules/@material-ui/core/esm/colors/pink.js");
 /* harmony import */ var _colors_red__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../colors/red */ "./node_modules/@material-ui/core/esm/colors/red.js");
-/* harmony import */ var _colorManipulator__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./colorManipulator */ "./node_modules/@material-ui/core/esm/styles/colorManipulator.js");
+/* harmony import */ var _colors_orange__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../colors/orange */ "./node_modules/@material-ui/core/esm/colors/orange.js");
+/* harmony import */ var _colors_blue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../colors/blue */ "./node_modules/@material-ui/core/esm/colors/blue.js");
+/* harmony import */ var _colors_green__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../colors/green */ "./node_modules/@material-ui/core/esm/colors/green.js");
+/* harmony import */ var _colorManipulator__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./colorManipulator */ "./node_modules/@material-ui/core/esm/styles/colorManipulator.js");
+
+
+
 
 
 
@@ -2622,10 +2628,11 @@ var light = {
     // The color of an active action like an icon button.
     active: 'rgba(0, 0, 0, 0.54)',
     // The color of an hovered action.
-    hover: 'rgba(0, 0, 0, 0.08)',
-    hoverOpacity: 0.08,
+    hover: 'rgba(0, 0, 0, 0.04)',
+    hoverOpacity: 0.04,
     // The color of a selected action.
-    selected: 'rgba(0, 0, 0, 0.14)',
+    selected: 'rgba(0, 0, 0, 0.08)',
+    selectedOpacity: 0.08,
     // The color of a disabled action.
     disabled: 'rgba(0, 0, 0, 0.26)',
     // The background color of a disabled action.
@@ -2647,9 +2654,10 @@ var dark = {
   },
   action: {
     active: _colors_common__WEBPACK_IMPORTED_MODULE_3__["default"].white,
-    hover: 'rgba(255, 255, 255, 0.1)',
-    hoverOpacity: 0.1,
-    selected: 'rgba(255, 255, 255, 0.2)',
+    hover: 'rgba(255, 255, 255, 0.08)',
+    hoverOpacity: 0.08,
+    selected: 'rgba(255, 255, 255, 0.16)',
+    selectedOpacity: 0.16,
     disabled: 'rgba(255, 255, 255, 0.3)',
     disabledBackground: 'rgba(255, 255, 255, 0.12)'
   }
@@ -2660,9 +2668,9 @@ function addLightOrDark(intent, direction, shade, tonalOffset) {
     if (intent.hasOwnProperty(shade)) {
       intent[direction] = intent[shade];
     } else if (direction === 'light') {
-      intent.light = Object(_colorManipulator__WEBPACK_IMPORTED_MODULE_8__["lighten"])(intent.main, tonalOffset);
+      intent.light = Object(_colorManipulator__WEBPACK_IMPORTED_MODULE_11__["lighten"])(intent.main, tonalOffset);
     } else if (direction === 'dark') {
-      intent.dark = Object(_colorManipulator__WEBPACK_IMPORTED_MODULE_8__["darken"])(intent.main, tonalOffset * 1.5);
+      intent.dark = Object(_colorManipulator__WEBPACK_IMPORTED_MODULE_11__["darken"])(intent.main, tonalOffset * 1.5);
     }
   }
 }
@@ -2686,13 +2694,31 @@ function createPalette(palette) {
     main: _colors_red__WEBPACK_IMPORTED_MODULE_7__["default"][500],
     dark: _colors_red__WEBPACK_IMPORTED_MODULE_7__["default"][700]
   } : _palette$error,
+      _palette$warning = palette.warning,
+      warning = _palette$warning === void 0 ? {
+    light: _colors_orange__WEBPACK_IMPORTED_MODULE_8__["default"][300],
+    main: _colors_orange__WEBPACK_IMPORTED_MODULE_8__["default"][500],
+    dark: _colors_orange__WEBPACK_IMPORTED_MODULE_8__["default"][700]
+  } : _palette$warning,
+      _palette$info = palette.info,
+      info = _palette$info === void 0 ? {
+    light: _colors_blue__WEBPACK_IMPORTED_MODULE_9__["default"][300],
+    main: _colors_blue__WEBPACK_IMPORTED_MODULE_9__["default"][500],
+    dark: _colors_blue__WEBPACK_IMPORTED_MODULE_9__["default"][700]
+  } : _palette$info,
+      _palette$success = palette.success,
+      success = _palette$success === void 0 ? {
+    light: _colors_green__WEBPACK_IMPORTED_MODULE_10__["default"][300],
+    main: _colors_green__WEBPACK_IMPORTED_MODULE_10__["default"][500],
+    dark: _colors_green__WEBPACK_IMPORTED_MODULE_10__["default"][700]
+  } : _palette$success,
       _palette$type = palette.type,
       type = _palette$type === void 0 ? 'light' : _palette$type,
       _palette$contrastThre = palette.contrastThreshold,
       contrastThreshold = _palette$contrastThre === void 0 ? 3 : _palette$contrastThre,
       _palette$tonalOffset = palette.tonalOffset,
       tonalOffset = _palette$tonalOffset === void 0 ? 0.2 : _palette$tonalOffset,
-      other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(palette, ["primary", "secondary", "error", "type", "contrastThreshold", "tonalOffset"]); // Use the same logic as
+      other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(palette, ["primary", "secondary", "error", "warning", "info", "success", "type", "contrastThreshold", "tonalOffset"]); // Use the same logic as
   // Bootstrap: https://github.com/twbs/bootstrap/blob/1d6e3710dd447de1a200f29e8fa521f8a0908f70/scss/_functions.scss#L59
   // and material-components-web https://github.com/material-components/material-components-web/blob/ac46b8863c4dab9fc22c4c662dc6bd1b65dd652f/packages/mdc-theme/_functions.scss#L54
 
@@ -2702,10 +2728,10 @@ function createPalette(palette) {
       throw new TypeError("Material-UI: missing background argument in getContrastText(".concat(background, ")."));
     }
 
-    var contrastText = Object(_colorManipulator__WEBPACK_IMPORTED_MODULE_8__["getContrastRatio"])(background, dark.text.primary) >= contrastThreshold ? dark.text.primary : light.text.primary;
+    var contrastText = Object(_colorManipulator__WEBPACK_IMPORTED_MODULE_11__["getContrastRatio"])(background, dark.text.primary) >= contrastThreshold ? dark.text.primary : light.text.primary;
 
     if (true) {
-      var contrast = Object(_colorManipulator__WEBPACK_IMPORTED_MODULE_8__["getContrastRatio"])(background, contrastText);
+      var contrast = Object(_colorManipulator__WEBPACK_IMPORTED_MODULE_11__["getContrastRatio"])(background, contrastText);
 
       if (contrast < 3) {
         console.error(["Material-UI: the contrast ratio of ".concat(contrast, ":1 for ").concat(contrastText, " on ").concat(background), 'falls below the WCAG recommended absolute minimum contrast ratio of 3:1.', 'https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-contrast'].join('\n'));
@@ -2763,12 +2789,18 @@ function createPalette(palette) {
     secondary: augmentColor(secondary, 'A400', 'A200', 'A700'),
     // The colors used to represent interface elements that the user should be made aware of.
     error: augmentColor(error),
+    // The colors used to represent potentially dangerous actions or important messages.
+    warning: augmentColor(warning),
+    // The colors used to present information to the user that is neutral and not necessarily important.
+    info: augmentColor(info),
+    // The colors used to indicate the successful completion of an action that user triggered.
+    success: augmentColor(success),
     // The grey colors.
     grey: _colors_grey__WEBPACK_IMPORTED_MODULE_4__["default"],
-    // Used by `getContrastText()` to maximize the contrast between the background and
-    // the text.
+    // Used by `getContrastText()` to maximize the contrast between
+    // the background and the text.
     contrastThreshold: contrastThreshold,
-    // Take a background color and return the color of the text to maximize the contrast.
+    // Takes a background color and returns the text color that maximizes the contrast.
     getContrastText: getContrastText,
     // Generate a rich color object.
     augmentColor: augmentColor,
@@ -2995,7 +3027,7 @@ function createTypography(palette, typography) {
     htmlFontSize: htmlFontSize,
     pxToRem: pxToRem,
     round: round,
-    // TODO To remove in v5?
+    // TODO v5: remove
     fontFamily: fontFamily,
     fontSize: fontSize,
     fontWeightLight: fontWeightLight,
@@ -3121,7 +3153,7 @@ var defaultTheme = Object(_createMuiTheme__WEBPACK_IMPORTED_MODULE_0__["default"
 /*!************************************************************!*\
   !*** ./node_modules/@material-ui/core/esm/styles/index.js ***!
   \************************************************************/
-/*! exports provided: hexToRgb, rgbToHex, hslToRgb, decomposeColor, recomposeColor, getContrastRatio, getLuminance, emphasize, fade, darken, lighten, createMuiTheme, createStyles, makeStyles, responsiveFontSizes, styled, easing, duration, formatMs, isString, isNumber, useTheme, withStyles, withTheme, createGenerateClassName, jssPreset, ServerStyleSheets, StylesProvider, MuiThemeProvider, ThemeProvider */
+/*! exports provided: createMuiTheme, createStyles, makeStyles, responsiveFontSizes, styled, useTheme, withStyles, withTheme, createGenerateClassName, jssPreset, ServerStyleSheets, StylesProvider, MuiThemeProvider, ThemeProvider, hexToRgb, rgbToHex, hslToRgb, decomposeColor, recomposeColor, getContrastRatio, getLuminance, emphasize, fade, darken, lighten, easing, duration */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3168,12 +3200,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "easing", function() { return _transitions__WEBPACK_IMPORTED_MODULE_6__["easing"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "duration", function() { return _transitions__WEBPACK_IMPORTED_MODULE_6__["duration"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "formatMs", function() { return _transitions__WEBPACK_IMPORTED_MODULE_6__["formatMs"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isString", function() { return _transitions__WEBPACK_IMPORTED_MODULE_6__["isString"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isNumber", function() { return _transitions__WEBPACK_IMPORTED_MODULE_6__["isNumber"]; });
 
 /* harmony import */ var _useTheme__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./useTheme */ "./node_modules/@material-ui/core/esm/styles/useTheme.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "useTheme", function() { return _useTheme__WEBPACK_IMPORTED_MODULE_7__["default"]; });
@@ -3402,16 +3428,13 @@ var styled = function styled(Component) {
 /*!******************************************************************!*\
   !*** ./node_modules/@material-ui/core/esm/styles/transitions.js ***!
   \******************************************************************/
-/*! exports provided: easing, duration, formatMs, isString, isNumber, default */
+/*! exports provided: easing, duration, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "easing", function() { return easing; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "duration", function() { return duration; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatMs", function() { return formatMs; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isString", function() { return isString; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isNumber", function() { return isNumber; });
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
 
 // Follow https://material.google.com/motion/duration-easing.html#duration-easing-natural-easing-curves
@@ -3442,15 +3465,10 @@ var duration = {
   // recommended when something is leaving screen
   leavingScreen: 195
 };
-var formatMs = function formatMs(milliseconds) {
+
+function formatMs(milliseconds) {
   return "".concat(Math.round(milliseconds), "ms");
-};
-var isString = function isString(value) {
-  return typeof value === 'string';
-};
-var isNumber = function isNumber(value) {
-  return !isNaN(parseFloat(value));
-};
+}
 /**
  * @param {string|Array} props
  * @param {object} param
@@ -3459,6 +3477,7 @@ var isNumber = function isNumber(value) {
  * @param {string} param.easing
  * @param {number} param.delay
  */
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   easing: easing,
@@ -3476,6 +3495,14 @@ var isNumber = function isNumber(value) {
         other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__["default"])(options, ["duration", "easing", "delay"]);
 
     if (true) {
+      var isString = function isString(value) {
+        return typeof value === 'string';
+      };
+
+      var isNumber = function isNumber(value) {
+        return !isNaN(parseFloat(value));
+      };
+
       if (!isString(props) && !Array.isArray(props)) {
         console.error('Material-UI: argument "props" must be a string or Array.');
       }
@@ -4352,7 +4379,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "withThemeCreator", function() { return _withTheme__WEBPACK_IMPORTED_MODULE_13__["withThemeCreator"]; });
 
-/** @license Material-UI v4.7.1
+/** @license Material-UI v4.9.0
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -4642,7 +4669,8 @@ function attach(_ref2, props) {
     var dynamicSheet = stylesOptions.jss.createStyleSheet(sheetManager.dynamicStyles, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
       link: true
     }, options));
-    dynamicSheet.update(props).attach();
+    dynamicSheet.update(props);
+    dynamicSheet.attach();
     state.dynamicSheet = dynamicSheet;
     state.classes = Object(_mergeClasses__WEBPACK_IMPORTED_MODULE_4__["default"])({
       baseClasses: sheetManager.staticSheet.classes,
@@ -5796,7 +5824,7 @@ function toVal(mix) {
 	var k, y, str='';
 	if (mix) {
 		if (typeof mix === 'object') {
-			if (!!mix.push) {
+			if (Array.isArray(mix)) {
 				for (k=0; k < mix.length; k++) {
 					if (mix[k] && (y = toVal(mix[k]))) {
 						str && (str += ' ');
@@ -10396,11 +10424,14 @@ var MEMO_STATICS = {
 };
 var TYPE_STATICS = {};
 TYPE_STATICS[reactIs.ForwardRef] = FORWARD_REF_STATICS;
+TYPE_STATICS[reactIs.Memo] = MEMO_STATICS;
 
 function getStatics(component) {
+  // React v16.11 and below
   if (reactIs.isMemo(component)) {
     return MEMO_STATICS;
-  }
+  } // React v16.12 and above
+
 
   return TYPE_STATICS[component['$$typeof']] || REACT_STATICS;
 }
@@ -11070,17 +11101,22 @@ function jssNested() {
     return result;
   }
 
-  function getOptions(rule, container, options) {
+  function getOptions(rule, container, prevOptions) {
     // Options has been already created, now we only increase index.
-    if (options) return Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, options, {
-      index: options.index + 1
+    if (prevOptions) return Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, prevOptions, {
+      index: prevOptions.index + 1
     });
     var nestingLevel = rule.options.nestingLevel;
     nestingLevel = nestingLevel === undefined ? 1 : nestingLevel + 1;
-    return Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, rule.options, {
+
+    var options = Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, rule.options, {
       nestingLevel: nestingLevel,
-      index: container.indexOf(rule) + 1
+      index: container.indexOf(rule) + 1 // We don't need the parent name to be set options for chlid.
+
     });
+
+    delete options.name;
+    return options;
   }
 
   function onProcessStyle(style, rule, sheet) {
@@ -11708,11 +11744,14 @@ function () {
     this.type = 'conditional';
     this.at = void 0;
     this.key = void 0;
+    this.query = void 0;
     this.rules = void 0;
     this.options = void 0;
     this.isProcessed = false;
     this.renderable = void 0;
-    this.key = key;
+    this.key = key; // Key might contain a unique suffix in case the `name` passed by user was duplicate.
+
+    this.query = options.name;
     var atMatch = key.match(atRegExp);
     this.at = atMatch ? atMatch[1] : 'unknown';
     this.options = options;
@@ -11769,11 +11808,11 @@ function () {
     if (options.children == null) options.children = defaultToStringOptions.children;
 
     if (options.children === false) {
-      return this.key + " {}";
+      return this.query + " {}";
     }
 
     var children = this.rules.toString(options);
-    return children ? this.key + " {\n" + children + "\n}" : '';
+    return children ? this.query + " {\n" + children + "\n}" : '';
   };
 
   return ConditionalRule;
@@ -12120,6 +12159,7 @@ function () {
     this.map = {};
     this.raw = {};
     this.index = [];
+    this.counter = 0;
     this.options = void 0;
     this.classes = void 0;
     this.keyframes = void 0;
@@ -12136,7 +12176,7 @@ function () {
 
   var _proto = RuleList.prototype;
 
-  _proto.add = function add(key, decl, ruleOptions) {
+  _proto.add = function add(name, decl, ruleOptions) {
     var _this$options = this.options,
         parent = _this$options.parent,
         sheet = _this$options.sheet,
@@ -12152,15 +12192,25 @@ function () {
       jss: jss,
       Renderer: Renderer,
       generateId: generateId,
-      scoped: scoped
-    }, ruleOptions); // We need to save the original decl before creating the rule
+      scoped: scoped,
+      name: name
+    }, ruleOptions); // When user uses .createStyleSheet(), duplicate names are not possible, but
+    // `sheet.addRule()` opens the door for any duplicate rule name. When this happens
+    // we need to make the key unique within this RuleList instance scope.
+
+
+    var key = name;
+
+    if (name in this.raw) {
+      key = name + "-d" + this.counter++;
+    } // We need to save the original decl before creating the rule
     // because cache plugin needs to use it as a key to return a cached rule.
 
 
     this.raw[key] = decl;
 
     if (key in this.classes) {
-      // For e.g. rules inside of @media container
+      // E.g. rules inside of @media container
       options.selector = "." + escape(this.classes[key]);
     }
 
@@ -12187,7 +12237,7 @@ function () {
   _proto.remove = function remove(rule) {
     this.unregister(rule);
     delete this.raw[rule.key];
-    this.index.splice(this.indexOf(rule), 1);
+    this.index.splice(this.index.indexOf(rule), 1);
   }
   /**
    * Get index of a rule.
@@ -12209,7 +12259,7 @@ function () {
     this.index.slice(0).forEach(plugins$$1.onProcessRule, plugins$$1);
   }
   /**
-   * Register a rule in `.map` and `.classes` maps.
+   * Register a rule in `.map`, `.classes` and `.keyframes` maps.
    */
   ;
 
@@ -12262,10 +12312,10 @@ function () {
     }
 
     if (name) {
-      this.onUpdate(data, this.get(name), options);
+      this.updateOne(this.map[name], data, options);
     } else {
       for (var index = 0; index < this.index.length; index++) {
-        this.onUpdate(data, this.index[index], options);
+        this.updateOne(this.index[index], data, options);
       }
     }
   }
@@ -12274,7 +12324,7 @@ function () {
    */
   ;
 
-  _proto.onUpdate = function onUpdate(data, rule, options) {
+  _proto.updateOne = function updateOne(rule, data, options) {
     if (options === void 0) {
       options = defaultUpdateOptions;
     }
@@ -12481,7 +12531,7 @@ function () {
   ;
 
   _proto.deleteRule = function deleteRule(name) {
-    var rule = this.rules.get(name);
+    var rule = typeof name === 'object' ? name : this.rules.get(name);
     if (!rule) return false;
     this.rules.remove(rule);
 
@@ -12519,6 +12569,15 @@ function () {
 
     (_this$rules = this.rules).update.apply(_this$rules, arguments);
 
+    return this;
+  }
+  /**
+   * Updates a single rule.
+   */
+  ;
+
+  _proto.updateOne = function updateOne(rule, data, options) {
+    this.rules.updateOne(rule, data, options);
     return this;
   }
   /**
@@ -13267,7 +13326,7 @@ var Jss =
 function () {
   function Jss(options) {
     this.id = instanceCounter++;
-    this.version = "10.0.0";
+    this.version = "10.0.4";
     this.plugins = new PluginsRegistry();
     this.options = {
       id: {
@@ -13364,6 +13423,7 @@ function () {
   }
   /**
    * Create a rule without a Style Sheet.
+   * [Deprecated] will be removed in the next major version.
    */
   ;
 
@@ -13382,6 +13442,7 @@ function () {
     }
 
     var ruleOptions = Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, options, {
+      name: name,
       jss: this,
       Renderer: this.options.Renderer
     });
