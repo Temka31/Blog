@@ -1,4 +1,5 @@
 import React from "react";
+import TemporaryDrawer from "./Drawer"
 
 const styles = {
   root: {
@@ -15,7 +16,8 @@ const styles = {
 export default function Header() {
   return (
     <header style={styles.root}>
-      <h1>News</h1>
+    <TemporaryDrawer/> 
+    <h1>News</h1>
     </header>
   );
 }
