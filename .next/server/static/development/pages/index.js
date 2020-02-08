@@ -2460,48 +2460,54 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/MyLayout */ "./components/MyLayout.js");
-/* harmony import */ var _material_ui_core_Box__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/Box */ "@material-ui/core/Box");
-/* harmony import */ var _material_ui_core_Box__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_MediaCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/MediaCard */ "./components/MediaCard.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_MediaCard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/MediaCard */ "./components/MediaCard.js");
 var _jsxFileName = "/Users/tema/my-app/123/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
-
+const styles = {
+  root: {
+    display: "flex",
+    flexGrow: 1,
+    flexDirection: "row",
+    flexWrap: "wrap",
+    width: "100%",
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center"
+  }
+};
 
 const Index = props => __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_1__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 8
+    lineNumber: 20
   },
   __self: undefined
-}, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_2___default.a, {
-  display: "flex",
-  flexDirection: "row",
-  flexWrap: "wrap",
-  flexGrow: 1,
+}, __jsx("div", {
+  style: styles.root,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 9
+    lineNumber: 21
   },
   __self: undefined
-}, props.shows.map(show => __jsx(_components_MediaCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
+}, props.shows.map(show => __jsx(_components_MediaCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
   key: show.id,
   show: show,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 11
+    lineNumber: 23
   },
   __self: undefined
 }))));
 
 Index.getInitialProps = async function () {
   try {
-    const res = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default()("https://api.tvmaze.com/search/shows?q=batman");
+    const res = await isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_2___default()("https://api.tvmaze.com/search/shows?q=batman");
     const data = await res.json();
     console.log(`Show data fetched. Count: ${data.length}`);
     return {

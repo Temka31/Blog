@@ -1,16 +1,28 @@
 import React from "react";
 import Layout from "../components/MyLayout";
-import Box from "@material-ui/core/Box";
 import fetch from "isomorphic-unfetch";
 import MediaCard from "../components/MediaCard";
 
+const styles = {
+  root: {
+    display: "flex",
+    flexGrow: 1,
+    flexDirection: "row",
+    flexWrap: "wrap",
+    width: "100%",
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center"
+  }
+};
+
 const Index = props => (
   <Layout>
-    <Box display="flex" flexDirection="row" flexWrap="wrap" flexGrow={1}>
+    <div style={styles.root}>
       {props.shows.map(show => (
         <MediaCard key={show.id} show={show} />
       ))}
-    </Box>
+    </div>
   </Layout>
 );
 

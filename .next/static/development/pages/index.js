@@ -28739,10 +28739,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/MyLayout */ "./components/MyLayout.js");
-/* harmony import */ var _material_ui_core_Box__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/Box */ "./node_modules/@material-ui/core/esm/Box/index.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/next/dist/build/polyfills/fetch/index.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_MediaCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/MediaCard */ "./components/MediaCard.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/next/dist/build/polyfills/fetch/index.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_MediaCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/MediaCard */ "./components/MediaCard.js");
 
 var _jsxFileName = "/Users/tema/my-app/123/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
@@ -28750,32 +28749,40 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
-
+var styles = {
+  root: {
+    display: "flex",
+    flexGrow: 1,
+    flexDirection: "row",
+    flexWrap: "wrap",
+    width: "100%",
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center"
+  }
+};
 
 var Index = function Index(props) {
   return __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 20
     },
     __self: this
-  }, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    display: "flex",
-    flexDirection: "row",
-    flexWrap: "wrap",
-    flexGrow: 1,
+  }, __jsx("div", {
+    style: styles.root,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 21
     },
     __self: this
   }, props.shows.map(function (show) {
-    return __jsx(_components_MediaCard__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    return __jsx(_components_MediaCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
       key: show.id,
       show: show,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 23
       },
       __self: this
     });
@@ -28790,7 +28797,7 @@ Index.getInitialProps = function _callee() {
         case 0:
           _context.prev = 0;
           _context.next = 3;
-          return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()("https://api.tvmaze.com/search/shows?q=batman"));
+          return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default()("https://api.tvmaze.com/search/shows?q=batman"));
 
         case 3:
           res = _context.sent;
