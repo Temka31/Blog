@@ -8,7 +8,10 @@ import Listmenu from "./listMenu";
 const useStyles = makeStyles({
   list: {
     width: 250
-  }
+  },
+btn: {
+color:"white"
+}
 });
 export default function TemporaryDrawer() {
   const classes = useStyles();
@@ -40,8 +43,8 @@ export default function TemporaryDrawer() {
 
   return (
     <div>
-      <Button onClick={toggleDrawer("left", true)}>
-        <MenuIcon />
+      <Button className={classes.btn} onClick={toggleDrawer("left", true)}>
+        <MenuIcon  />
       </Button>
       <Drawer open={state.left} onClose={toggleDrawer("left", false)}>
         {sideList("left")}

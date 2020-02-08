@@ -29,8 +29,8 @@ export default function Header() {
     <header className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <TemporaryDrawer/>
+          <IconButton edge="start" className={classes.menuButton} >
+            <TemporaryDrawer />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
             News

@@ -56,6 +56,9 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_9__["makeStyles"])({
   list: {
     width: 250
+  },
+  btn: {
+    color: "white"
   }
 });
 function TemporaryDrawer() {
@@ -86,13 +89,13 @@ function TemporaryDrawer() {
       onKeyDown: toggleDrawer(side, false),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 31
+        lineNumber: 34
       },
       __self: this
     }, __jsx(_listMenu__WEBPACK_IMPORTED_MODULE_13__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 40
       },
       __self: this
     }));
@@ -101,20 +104,21 @@ function TemporaryDrawer() {
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 45
     },
     __self: this
   }, __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_11__["default"], {
+    className: classes.btn,
     onClick: toggleDrawer("left", true),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 46
     },
     __self: this
   }, __jsx(_material_ui_icons_Menu__WEBPACK_IMPORTED_MODULE_12___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 47
     },
     __self: this
   })), __jsx(_material_ui_core_Drawer__WEBPACK_IMPORTED_MODULE_10__["default"], {
@@ -122,7 +126,7 @@ function TemporaryDrawer() {
     onClose: toggleDrawer("left", false),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 49
     },
     __self: this
   }, sideList("left")));
@@ -419,7 +423,7 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ma
       display: "flex",
       flexShrink: 1,
       width: "100%",
-      maxWidth: 360,
+      maxWidth: 300,
       minWidth: 200,
       backgroundColor: theme.palette.background.paper,
       "@media only screen and (max-width: 768px)": {
@@ -584,8 +588,6 @@ function Header() {
   }, __jsx(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_6__["default"], {
     edge: "start",
     className: classes.menuButton,
-    color: "inherit",
-    "aria-label": "menu",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 32
