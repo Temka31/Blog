@@ -46,7 +46,6 @@ var styles = {
     display: "flex",
     flexBasis: "100%",
     flexShrink: 0,
-    overflow: "auto",
     flexGrow: 1
   }
 };
@@ -55,46 +54,46 @@ function Layout(props) {
     style: styles.root,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 42
     },
     __self: this
   }, __jsx(_header__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 43
     },
     __self: this
   }), __jsx("div", {
     style: styles.main,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 44
     },
     __self: this
   }, __jsx(_Sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 45
     },
     __self: this
   }), __jsx("div", {
     style: styles.mainmain,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 46
     },
     __self: this
   }, __jsx("div", {
     style: styles.posts,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 47
     },
     __self: this
   }, props.children), __jsx(_footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 48
     },
     __self: this
   }))));
@@ -103,4 +102,4 @@ function Layout(props) {
 /***/ })
 
 })
-//# sourceMappingURL=index.js.be9dcbac41876c609b20.hot-update.js.map
+//# sourceMappingURL=index.js.b1664aa672940d223d7b.hot-update.js.map

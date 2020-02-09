@@ -323,7 +323,8 @@ var styles = {
     display: "flex",
     flexBasis: "100%",
     flexShrink: 0,
-    overflow: "auto",
+
+    /* overflow: "auto", */
     flexGrow: 1
   }
 };
