@@ -48,6 +48,7 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_4__["ma
     },
     posts: {
       display: "flex",
+      flexBasis: "100%",
       "@media only screen and (min-width: 768px)": {
         display: "flex",
         flexBasis: "100%",
@@ -112,4 +113,4 @@ function Layout(props) {
 /***/ })
 
 })
-//# sourceMappingURL=index.js.289d7a31b06a1e945479.hot-update.js.map
+//# sourceMappingURL=index.js.aeb243f17cc58ebf8e47.hot-update.js.map

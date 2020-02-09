@@ -10,7 +10,9 @@ import TemporaryDrawer from './Drawer'
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    position: "static"
+    position: "sticky",
+    left:0,
+    top:0
   },
   menuButton: {
     marginRight: theme.spacing(2),

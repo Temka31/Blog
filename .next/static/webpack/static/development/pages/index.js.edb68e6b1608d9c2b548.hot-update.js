@@ -48,12 +48,12 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_4__["ma
     },
     posts: {
       display: "flex",
-      flexBasis: "100%",
-      flexShrink: 0,
-      overflow: "auto",
-      flexGrow: 1,
       "@media only screen and (min-width: 768px)": {
-        display: "none"
+        display: "flex",
+        flexBasis: "100%",
+        flexShrink: 0,
+        overflow: "auto",
+        flexGrow: 1
       }
     }
   };
@@ -64,46 +64,46 @@ function Layout(props) {
     className: classes.root,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 51
     },
     __self: this
   }, __jsx(_header__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 52
     },
     __self: this
   }), __jsx("div", {
     className: classes.main,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 53
     },
     __self: this
   }, __jsx(_Sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 54
     },
     __self: this
   }), __jsx("div", {
     className: classes.mainmain,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 55
     },
     __self: this
   }, __jsx("div", {
     className: classes.posts,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 56
     },
     __self: this
   }, props.children), __jsx(_footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 57
     },
     __self: this
   }))));
@@ -112,4 +112,4 @@ function Layout(props) {
 /***/ })
 
 })
-//# sourceMappingURL=index.js.f35f2dd5c33eed98efbc.hot-update.js.map
+//# sourceMappingURL=index.js.edb68e6b1608d9c2b548.hot-update.js.map

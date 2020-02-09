@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -371,17 +371,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Sidebar */ "./components/Sidebar.js");
 /* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./header */ "./components/header.js");
 /* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./footer */ "./components/footer.js");
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/styles */ "@material-ui/core/styles");
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "/Users/tema/my-app/123/components/MyLayout.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
-
-
-const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_4__["makeStyles"])(theme => ({
+const styles = {
   root: {
     display: "flex",
     flexGrow: 1,
@@ -404,61 +400,57 @@ const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_4__["
   },
   posts: {
     display: "flex",
-    "@media only screen and (min-width: 768px)": {
-      display: "flex",
-      flexBasis: "100%",
-      flexShrink: 0,
-      overflow: "auto",
-      flexGrow: 1
-    }
+    flexBasis: "100%",
+    flexShrink: 0,
+    overflow: "auto",
+    flexGrow: 1
   }
-}));
+};
 function Layout(props) {
-  const classes = useStyles();
   return __jsx("div", {
-    className: classes.root,
+    style: styles.root,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 43
     },
     __self: this
   }, __jsx(_header__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 44
     },
     __self: this
   }), __jsx("div", {
-    className: classes.main,
+    style: styles.main,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 45
     },
     __self: this
   }, __jsx(_Sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 46
     },
     __self: this
   }), __jsx("div", {
-    className: classes.mainmain,
+    style: styles.mainmain,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 47
     },
     __self: this
   }, __jsx("div", {
-    className: classes.posts,
+    style: styles.posts,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 48
     },
     __self: this
   }, props.children), __jsx(_footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 49
     },
     __self: this
   }))));
@@ -630,7 +622,9 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["makeStyles"])(theme => ({
   root: {
     flexGrow: 1,
-    position: "static"
+    position: "sticky",
+    left: 0,
+    top: 0
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -648,13 +642,13 @@ function Header() {
     position: "static",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 32
     },
     __self: this
   }, __jsx(_material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_3___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 33
     },
     __self: this
   }, __jsx(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_6___default.a, {
@@ -662,13 +656,13 @@ function Header() {
     className: classes.menuButton,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 34
     },
     __self: this
   }, __jsx(_Drawer__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 35
     },
     __self: this
   })), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -676,7 +670,7 @@ function Header() {
     className: classes.title,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 37
     },
     __self: this
   }, "News")));
@@ -2514,7 +2508,7 @@ Index.getInitialProps = async function () {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
