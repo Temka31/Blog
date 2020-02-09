@@ -2,8 +2,10 @@ import React from "react";
 import Sidebar from "./Sidebar";
 import Header from "./header";
 import Footer from "./footer";
+import { useState } from "react";
+import { makeStyles } from "@material-ui/core/styles";
 
-const styles = {
+const useStyles = makeStyles(theme => ({
   root: {
     display: "flex",
     flexGrow: 1,
@@ -28,22 +30,30 @@ const styles = {
   },
 
   posts: {
+    
     display: "flex",
+    
+
+    "@media only screen and (min-width: 768px)": {
+      display: "flex",
     flexBasis: "100%",
     flexShrink: 0,
     overflow: "auto",
-    flexGrow: 1
+    flexGrow: 1,
+    }
+
   }
-};
+}));
 
 export default function Layout(props) {
+  const classes = useStyles();
   return (
-    <div style={styles.root}>
+    <div className={classes.root}>
       <Header />
-      <div style={styles.main}>
+      <div className={classes.main}>
         <Sidebar />
-        <div style={styles.mainmain}>
-          <div style={styles.posts}>{props.children}</div>
+        <div className={classes.mainmain}>
+          <div className={classes.posts}>{props.children}</div>
           <Footer />
         </div>
       </div>

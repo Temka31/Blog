@@ -292,86 +292,95 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Sidebar */ "./components/Sidebar.js");
 /* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./header */ "./components/header.js");
 /* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./footer */ "./components/footer.js");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/index.js");
 var _jsxFileName = "/Users/tema/my-app/123/components/MyLayout.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
-var styles = {
-  root: {
-    display: "flex",
-    flexGrow: 1,
-    flexDirection: "column",
-    width: "100%",
-    height: "100%"
-  },
-  main: {
-    display: "flex",
-    flexGrow: 1,
-    flexDirection: "row",
-    width: "100%",
-    height: "100%"
-  },
-  mainmain: {
-    display: "flex",
-    flexDirection: "column",
-    flexWrap: "nowrap",
-    width: "100%"
-  },
-  posts: {
-    display: "flex",
-    flexBasis: "100%",
-    flexShrink: 0,
-    overflow: "auto",
-    flexGrow: 1
-  }
-};
+
+
+var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_4__["makeStyles"])(function (theme) {
+  return {
+    root: {
+      display: "flex",
+      flexGrow: 1,
+      flexDirection: "column",
+      width: "100%",
+      height: "100%"
+    },
+    main: {
+      display: "flex",
+      flexGrow: 1,
+      flexDirection: "row",
+      width: "100%",
+      height: "100%"
+    },
+    mainmain: {
+      display: "flex",
+      flexDirection: "column",
+      flexWrap: "nowrap",
+      width: "100%"
+    },
+    posts: {
+      display: "flex",
+      "@media only screen and (min-width: 768px)": {
+        display: "flex",
+        flexBasis: "100%",
+        flexShrink: 0,
+        overflow: "auto",
+        flexGrow: 1
+      }
+    }
+  };
+});
 function Layout(props) {
+  var classes = useStyles();
   return __jsx("div", {
-    style: styles.root,
+    className: classes.root,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 51
     },
     __self: this
   }, __jsx(_header__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 52
     },
     __self: this
   }), __jsx("div", {
-    style: styles.main,
+    className: classes.main,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 53
     },
     __self: this
   }, __jsx(_Sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 54
     },
     __self: this
   }), __jsx("div", {
-    style: styles.mainmain,
+    className: classes.mainmain,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 55
     },
     __self: this
   }, __jsx("div", {
-    style: styles.posts,
+    className: classes.posts,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 56
     },
     __self: this
   }, props.children), __jsx(_footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 57
     },
     __self: this
   }))));
@@ -28814,7 +28823,7 @@ Index.getInitialProps = function _callee() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!******************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Ftema%2Fmy-app%2F123%2Fpages%2Findex.js ***!
   \******************************************************************************************************************/
@@ -28837,5 +28846,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
