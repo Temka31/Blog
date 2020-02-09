@@ -8,28 +8,16 @@ const styles = {
     display: "flex",
     flexGrow: 1,
     flexDirection: "column",
-    flexWrap: "nowrap",
     width: "100%",
     height: "100%"
   },
-  header: {
-    display: "flex",
-    flexDirection: "column",
-    flexWrap: "nowrap"
-  },
+ 
   main: {
     display: "flex",
     flexGrow: 1,
     flexDirection: "row",
-    flexWrap: "nowrap",
     width: "100%",
     height: "100%"
-    // [theme.breakpoints.down('sm')]: {
-    //   color:'yellow'
-    // },
-    // "@media only screen and (max-width: 768px)": {
-    //   color:'red'
-    // }
   },
 
   mainmain: {
@@ -44,8 +32,7 @@ const styles = {
     flexBasis: "100%",
     flexShrink: 0,
     overflow: "auto",
-    flexGrow: 1,
-    height: "100%"
+    flexGrow: 1
   }
 };
 

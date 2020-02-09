@@ -10,6 +10,7 @@ import TemporaryDrawer from './Drawer'
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
+    position: "static"
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -26,7 +27,6 @@ export default function Header() {
   const classes = useStyles();
 
   return (
-    <header className={classes.root}>
       <AppBar position="static">
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} >
@@ -37,6 +37,6 @@ export default function Header() {
           </Typography>
         </Toolbar>
       </AppBar>
-    </header>
+    
   );
 }

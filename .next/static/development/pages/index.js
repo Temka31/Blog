@@ -303,28 +303,15 @@ var styles = {
     display: "flex",
     flexGrow: 1,
     flexDirection: "column",
-    flexWrap: "nowrap",
     width: "100%",
     height: "100%"
-  },
-  header: {
-    display: "flex",
-    flexDirection: "column",
-    flexWrap: "nowrap"
   },
   main: {
     display: "flex",
     flexGrow: 1,
     flexDirection: "row",
-    flexWrap: "nowrap",
     width: "100%",
-    height: "100%" // [theme.breakpoints.down('sm')]: {
-    //   color:'yellow'
-    // },
-    // "@media only screen and (max-width: 768px)": {
-    //   color:'red'
-    // }
-
+    height: "100%"
   },
   mainmain: {
     display: "flex",
@@ -337,8 +324,7 @@ var styles = {
     flexBasis: "100%",
     flexShrink: 0,
     overflow: "auto",
-    flexGrow: 1,
-    height: "100%"
+    flexGrow: 1
   }
 };
 function Layout(props) {
@@ -346,46 +332,46 @@ function Layout(props) {
     style: styles.root,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 41
     },
     __self: this
   }, __jsx(_header__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 42
     },
     __self: this
   }), __jsx("div", {
     style: styles.main,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 43
     },
     __self: this
   }, __jsx(_Sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 44
     },
     __self: this
   }), __jsx("div", {
     style: styles.mainmain,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 45
     },
     __self: this
   }, __jsx("div", {
     style: styles.posts,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 46
     },
     __self: this
   }, props.children), __jsx(_footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 47
     },
     __self: this
   }))));
@@ -550,7 +536,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["makeStyles"])(function (theme) {
   return {
     root: {
-      flexGrow: 1
+      flexGrow: 1,
+      position: "static"
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -565,14 +552,7 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["ma
 });
 function Header() {
   var classes = useStyles();
-  return __jsx("header", {
-    className: classes.root,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  }, __jsx(_material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  return __jsx(_material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_2__["default"], {
     position: "static",
     __source: {
       fileName: _jsxFileName,
@@ -607,7 +587,7 @@ function Header() {
       lineNumber: 35
     },
     __self: this
-  }, "News"))));
+  }, "News")));
 }
 
 /***/ }),
