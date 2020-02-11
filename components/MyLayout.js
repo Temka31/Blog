@@ -27,12 +27,13 @@ const styles = {
     overflow: "auto",
   flexBasis: "100%",
   flexGrow: 0,
+    flexShrink:1
   },
 
   posts: {
     
     display: "flex",
-    flexShrink: 0,
+    flexShrink: 1,
     overflow:"auto",
     flexGrow: 0,
     }
