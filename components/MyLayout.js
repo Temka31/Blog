@@ -16,7 +16,8 @@ const styles = {
     flexShrink:1,
     flexDirection: "row",
     width: "100%",
-    height: "100%"
+    height: "100%",
+    flexBasis: "100%",
   },
 
   mainmain: {
@@ -25,7 +26,7 @@ const styles = {
     flexWrap: "nowrap",
     width: "100%",
     overflow: "auto",
-  flexBasis: "100%",
+  
     flexShrink: 1,
     flexGrow:1,
   },
