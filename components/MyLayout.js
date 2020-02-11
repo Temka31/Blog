@@ -35,7 +35,7 @@ const styles = {
     display: "flex",
     flexShrink: 1,
     overflow:"auto",
-    flexGrow: 0,
+    
     }
 
 };
