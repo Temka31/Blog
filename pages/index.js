@@ -9,8 +9,6 @@ const styles = {
     flexShrink: 1,
     flexDirection: "row",
     flexWrap: "wrap",
-    width: "100%",
-    height: "100%",
     justifyContent: "center",
     alignItems: "center"
   }
