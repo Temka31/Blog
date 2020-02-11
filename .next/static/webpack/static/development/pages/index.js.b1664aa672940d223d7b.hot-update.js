@@ -24,7 +24,6 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var styles = {
   root: {
     display: "flex",
-    flexGrow: 1,
     flexDirection: "column",
     width: "100%",
     height: "100%"
@@ -46,6 +45,7 @@ var styles = {
     display: "flex",
     flexBasis: "100%",
     flexShrink: 0,
+    overflow: "auto",
     flexGrow: 1
   }
 };

@@ -380,14 +380,13 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const styles = {
   root: {
     display: "flex",
-    flexGrow: 1,
     flexDirection: "column",
     width: "100%",
     height: "100%"
   },
   main: {
     display: "flex",
-    flexGrow: 1,
+    flexShrink: 1,
     flexDirection: "row",
     width: "100%",
     height: "100%"
@@ -396,15 +395,16 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     flexWrap: "nowrap",
-    width: "100%"
+    width: "100%",
+    overflow: "auto",
+    flexBasis: "100%",
+    flexGrow: 0
   },
   posts: {
     display: "flex",
-    flexBasis: "100%",
     flexShrink: 0,
-
-    /* overflow: "auto", */
-    flexGrow: 1
+    overflow: "auto",
+    flexGrow: 0
   }
 };
 function Layout(props) {
@@ -412,46 +412,46 @@ function Layout(props) {
     style: styles.root,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 44
     },
     __self: this
   }, __jsx(_header__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 45
     },
     __self: this
   }), __jsx("div", {
     style: styles.main,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 46
     },
     __self: this
   }, __jsx(_Sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 47
     },
     __self: this
   }), __jsx("div", {
     style: styles.mainmain,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 48
     },
     __self: this
   }, __jsx("div", {
     style: styles.posts,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 49
     },
     __self: this
   }, props.children), __jsx(_footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 50
     },
     __self: this
   }))));
@@ -623,9 +623,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["makeStyles"])(theme => ({
   root: {
     flexGrow: 1,
-    position: "sticky",
-    left: 0,
-    top: 0
+    position: "static"
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -643,13 +641,13 @@ function Header() {
     position: "static",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 31
     },
     __self: this
   }, __jsx(_material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_3___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 32
     },
     __self: this
   }, __jsx(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_6___default.a, {
@@ -657,13 +655,13 @@ function Header() {
     className: classes.menuButton,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 33
     },
     __self: this
   }, __jsx(_Drawer__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 34
     },
     __self: this
   })), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -671,7 +669,7 @@ function Header() {
     className: classes.title,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 36
     },
     __self: this
   }, "News")));
@@ -2458,6 +2456,7 @@ const styles = {
   root: {
     display: "flex",
     flexGrow: 1,
+    flexShrink: 0,
     flexDirection: "row",
     flexWrap: "wrap",
     width: "100%",
@@ -2470,14 +2469,14 @@ const styles = {
 const Index = props => __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_1__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 20
+    lineNumber: 21
   },
   __self: undefined
 }, __jsx("div", {
   style: styles.root,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 21
+    lineNumber: 22
   },
   __self: undefined
 }, props.shows.map(show => __jsx(_components_MediaCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -2485,7 +2484,7 @@ const Index = props => __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_1__["
   show: show,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 23
+    lineNumber: 24
   },
   __self: undefined
 }))));

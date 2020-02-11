@@ -6,7 +6,6 @@ import Footer from "./footer";
 const styles = {
   root: {
     display: "flex",
-    flexGrow: 1,
     flexDirection: "column",
     width: "100%",
     height: "100%"
@@ -14,7 +13,7 @@ const styles = {
  
   main: {
     display: "flex",
-    flexGrow: 1,
+    flexShrink:1,
     flexDirection: "row",
     width: "100%",
     height: "100%"
@@ -24,16 +23,18 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     flexWrap: "nowrap",
-    width: "100%"
+    width: "100%",
+    overflow: "auto",
+  flexBasis: "100%",
+  flexGrow: 0,
   },
 
   posts: {
     
     display: "flex",
-    flexBasis: "100%",
     flexShrink: 0,
-    overflow: "auto",
-    flexGrow: 1,
+    overflow:"auto",
+    flexGrow: 0,
     }
 
 };
