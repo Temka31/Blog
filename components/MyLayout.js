@@ -1,4 +1,3 @@
-  
 import React from "react";
 import Sidebar from "./Sidebar";
 import Header from "./header";
@@ -33,7 +32,7 @@ const styles = {
   posts: {
     
     display: "flex",
-    flexShrink: 1,
+    flexShrink: 0,
     overflow:"auto",
     flexGrow: 0,
     }
