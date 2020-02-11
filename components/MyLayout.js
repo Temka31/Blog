@@ -23,7 +23,8 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     overflow: "auto",
-    flexGrow:0
+    flexGrow:0,
+    flexBasis: "100%"
   }
 
 
