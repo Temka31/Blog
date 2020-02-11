@@ -1,3 +1,4 @@
+  
 import React from "react";
 import Sidebar from "./Sidebar";
 import Header from "./header";
@@ -16,9 +17,7 @@ const styles = {
     flexShrink:1,
     flexDirection: "row",
     width: "100%",
-    height: "100%",
-    flexBasis: "100%",
-     flexGrow:0,
+    height: "100%"
   },
 
   mainmain: {
@@ -27,7 +26,8 @@ const styles = {
     flexWrap: "nowrap",
     width: "100%",
     overflow: "auto",
-      flexShrink: 1,
+  flexBasis: "100%",
+  flexGrow: 0,
   },
 
   posts: {
@@ -35,6 +35,7 @@ const styles = {
     display: "flex",
     flexShrink: 1,
     overflow:"auto",
+    flexGrow: 0,
     }
 
 };
