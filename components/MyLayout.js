@@ -26,10 +26,11 @@ const styles = {
     height: "100%",
     overflow: "auto",
      flexShrink:1,
+flexGrow:0,
   },
 
   posts: {
-    
+    flexGrow:0,
     display: "flex",
     flexShrink: 1,
     overflow:"auto",
