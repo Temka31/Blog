@@ -7,7 +7,7 @@ const styles = {
   root: {
     display: "flex",
     flexGrow: 1,
-    flexShrink: 0,
+    flexShrink: 1,
     flexDirection: "row",
     flexWrap: "wrap",
     width: "100%",
