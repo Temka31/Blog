@@ -16,24 +16,26 @@ const styles = {
     flexShrink:1,
     flexDirection: "row",
     width: "100%",
-    height: "100%",
-    flexGrow: 0,
+    height: "100%"
   },
 
   mainmain: {
     display: "flex",
     flexDirection: "column",
+    flexWrap: "nowrap",
     width: "100%",
     overflow: "auto",
   flexBasis: "100%",
-  flexShrink: 1,
+  flexGrow: 0,
+    flexShrink:1,
   },
 
   posts: {
     
     display: "flex",
-    overflow:"auto",
     flexShrink: 1,
+    overflow:"auto",
+    flexGrow: 0,
     }
 
 };
