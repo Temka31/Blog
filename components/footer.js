@@ -2,9 +2,7 @@ import React from "react";
 
 const styles = {
   root: {
-    display: "flex",
-    flexDirection: "row",
-    flexWrap: "wrap"
+    height: "100px",
   }
 };
 
