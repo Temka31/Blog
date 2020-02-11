@@ -15,7 +15,6 @@ const styles = {
     display: "flex",
     flexShrink:1,
     flexDirection: "row",
-    width: "100%",
     height: "100%"
   },
 
