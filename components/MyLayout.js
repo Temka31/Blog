@@ -22,7 +22,6 @@ const styles = {
   mainmain: {
     display: "flex",
     flexDirection: "column",
-    flexWrap: "nowrap",
     width: "100%",
     overflow: "auto",
   flexBasis: "100%",
@@ -33,9 +32,7 @@ const styles = {
   posts: {
     
     display: "flex",
-    flexShrink: 0,
     overflow:"auto",
-    flexGrow: 0,
     flexShrink: 1,
     }
 
