@@ -9,7 +9,8 @@ const styles = {
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    flexShrink:1,
   }
 };
 
