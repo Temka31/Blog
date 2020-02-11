@@ -16,7 +16,8 @@ const styles = {
     flexShrink:1,
     flexDirection: "row",
     width: "100%",
-    height: "100%"
+    height: "100%",
+    flexGrow: 0,
   },
 
   mainmain: {
@@ -25,8 +26,7 @@ const styles = {
     width: "100%",
     overflow: "auto",
   flexBasis: "100%",
-  flexGrow: 0,
-    flexShrink: 1,
+  flexShrink: 1,
   },
 
   posts: {
