@@ -26,6 +26,7 @@ const styles = {
     width: "100%",
     overflow: "auto",
   flexBasis: "100%",
+    flexShrink: 1,
   },
 
   posts: {
