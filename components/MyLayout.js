@@ -20,11 +20,10 @@ const styles = {
   },
 
   mainmain: {
-    display: "flex",
     flexDirection: "column",
     overflow: "auto",
     flexBasis: "100%",
-    flexShrink:1,
+    flexGrow:0,
   }
 
 
