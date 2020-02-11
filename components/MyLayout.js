@@ -22,9 +22,8 @@ const styles = {
   mainmain: {
     display: "flex",
     flexDirection: "column",
-    width: "100%",
-    height: "100%",
     overflow: "auto",
+    flexGrow:0
   }
 
 
