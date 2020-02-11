@@ -6,7 +6,6 @@ import MediaCard from "../components/MediaCard";
 const styles = {
   root: {
     display: "flex",
-    flexGrow: 1,
     flexShrink: 1,
     flexDirection: "row",
     flexWrap: "wrap",
