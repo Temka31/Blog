@@ -7,26 +7,23 @@ const styles = {
   root: {
     display: "flex",
     flexDirection: "column",
-    width: "100%",
-    height: "100%"
+    height: "100%",
+    position: "relative"
   },
- 
+
   main: {
+    paddingTop: "64px",
     display: "flex",
-    flexShrink:1,
     flexDirection: "row",
-    height: "100%"
+    flexWrap: "nowrap",
+    flexGrow: 1,
+    height:"100%"
   },
 
-  mainmain: {
-    flexDirection: "column",
+  content: {
     overflow: "auto",
-    flexBasis: "100%",
-    flexGrow:0,
+    flexGrow: 1
   }
-
-
-
 };
 
 export default function Layout(props) {
@@ -35,7 +32,7 @@ export default function Layout(props) {
       <Header />
       <div style={styles.main}>
         <Sidebar />
-        <div style={styles.mainmain}>
+        <div style={styles.content}>
           {props.children}
           <Footer />
         </div>

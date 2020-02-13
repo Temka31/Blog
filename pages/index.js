@@ -10,7 +10,7 @@ const styles = {
     flexWrap: "wrap",
     justifyContent: "center",
     alignItems: "center",
-    flexShrink:1,
+    flexGrow:1,
   }
 };
 

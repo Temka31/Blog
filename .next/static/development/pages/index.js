@@ -302,30 +302,20 @@ var styles = {
   root: {
     display: "flex",
     flexDirection: "column",
-    width: "100%",
-    height: "100%"
+    height: "100%",
+    position: "relative"
   },
   main: {
+    paddingTop: "64px",
     display: "flex",
-    flexShrink: 1,
     flexDirection: "row",
-    width: "100%",
+    flexWrap: "nowrap",
+    flexGrow: 1,
     height: "100%"
   },
-  mainmain: {
-    display: "flex",
-    flexDirection: "column",
-    flexWrap: "nowrap",
-    width: "100%",
+  content: {
     overflow: "auto",
-    flexBasis: "100%",
-    flexGrow: 0
-  },
-  posts: {
-    display: "flex",
-    flexShrink: 0,
-    overflow: "auto",
-    flexGrow: 0
+    flexGrow: 1
   }
 };
 function Layout(props) {
@@ -333,46 +323,39 @@ function Layout(props) {
     style: styles.root,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 31
     },
     __self: this
   }, __jsx(_header__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 32
     },
     __self: this
   }), __jsx("div", {
     style: styles.main,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 33
     },
     __self: this
   }, __jsx(_Sidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 34
     },
     __self: this
   }), __jsx("div", {
-    style: styles.mainmain,
+    style: styles.content,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 35
     },
     __self: this
-  }, __jsx("div", {
-    style: styles.posts,
+  }, props.children, __jsx(_footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
-    },
-    __self: this
-  }, props.children), __jsx(_footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 37
     },
     __self: this
   }))));
@@ -407,10 +390,6 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["makeStyles"])(function (theme) {
   return {
     desktop: {
-      display: "flex",
-      flexShrink: 1,
-      width: "100%",
-      maxWidth: 300,
       minWidth: 200,
       backgroundColor: theme.palette.background.paper,
       "@media only screen and (max-width: 768px)": {
@@ -438,7 +417,7 @@ function ListItemLink(props) {
   }, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 28
     },
     __self: this
   }));
@@ -450,13 +429,13 @@ function Sidebar() {
     className: classes.desktop,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 37
     },
     __self: this
   }, __jsx(_listMenu__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 38
     },
     __self: this
   }));
@@ -481,9 +460,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 var styles = {
   root: {
-    display: "flex",
-    flexDirection: "row",
-    flexWrap: "wrap"
+    height: "100px"
   }
 };
 function Footer() {
@@ -491,13 +468,13 @@ function Footer() {
     style: styles.root,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 11
     },
     __self: this
   }, __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 12
     },
     __self: this
   }, "\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0410\u0440\u0442\u0435\u043C\u0430"));
@@ -521,12 +498,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/AppBar */ "./node_modules/@material-ui/core/esm/AppBar/index.js");
 /* harmony import */ var _material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/Toolbar */ "./node_modules/@material-ui/core/esm/Toolbar/index.js");
 /* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/Typography */ "./node_modules/@material-ui/core/esm/Typography/index.js");
-/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/esm/Button/index.js");
-/* harmony import */ var _material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/IconButton */ "./node_modules/@material-ui/core/esm/IconButton/index.js");
-/* harmony import */ var _Drawer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Drawer */ "./components/Drawer.js");
+/* harmony import */ var _material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/IconButton */ "./node_modules/@material-ui/core/esm/IconButton/index.js");
+/* harmony import */ var _Drawer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Drawer */ "./components/Drawer.js");
 var _jsxFileName = "/Users/tema/my-app/123/components/header.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
 
 
 
@@ -537,8 +512,10 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["makeStyles"])(function (theme) {
   return {
     root: {
-      flexGrow: 1,
-      position: "static"
+      display: "flex",
+      position: "fixed",
+      height: "64px",
+      width: "100%"
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -554,7 +531,7 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["ma
 function Header() {
   var classes = useStyles();
   return __jsx(_material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    position: "static",
+    className: classes.root,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
@@ -566,7 +543,7 @@ function Header() {
       lineNumber: 32
     },
     __self: this
-  }, __jsx(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, __jsx(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_5__["default"], {
     edge: "start",
     className: classes.menuButton,
     __source: {
@@ -574,7 +551,7 @@ function Header() {
       lineNumber: 33
     },
     __self: this
-  }, __jsx(_Drawer__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, __jsx(_Drawer__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 34
@@ -12623,7 +12600,7 @@ var grid = Object(_compose__WEBPACK_IMPORTED_MODULE_1__["default"])(gridGap, gri
 /*!*******************************************************!*\
   !*** ./node_modules/@material-ui/system/esm/index.js ***!
   \*******************************************************/
-/*! exports provided: borders, border, borderTop, borderRight, borderBottom, borderLeft, borderColor, borderRadius, breakpoints, compose, css, display, flexbox, flexBasis, flexDirection, flexWrap, justifyContent, alignItems, alignContent, order, flex, flexGrow, flexShrink, alignSelf, justifyItems, justifySelf, grid, gridGap, gridColumnGap, gridRowGap, gridColumn, gridRow, gridAutoFlow, gridAutoColumns, gridAutoRows, gridTemplateColumns, gridTemplateRows, gridTemplateAreas, gridArea, palette, color, bgcolor, positions, position, zIndex, top, right, bottom, left, shadows, sizing, width, maxWidth, minWidth, height, maxHeight, minHeight, sizeWidth, sizeHeight, spacing, style, typography, fontFamily, fontSize, fontStyle, fontWeight, letterSpacing, lineHeight, textAlign */
+/*! exports provided: borders, breakpoints, compose, css, display, flexbox, grid, palette, positions, shadows, sizing, spacing, style, typography, border, borderTop, borderRight, borderBottom, borderLeft, borderColor, borderRadius, flexBasis, flexDirection, flexWrap, justifyContent, alignItems, alignContent, order, flex, flexGrow, flexShrink, alignSelf, justifyItems, justifySelf, gridGap, gridColumnGap, gridRowGap, gridColumn, gridRow, gridAutoFlow, gridAutoColumns, gridAutoRows, gridTemplateColumns, gridTemplateRows, gridTemplateAreas, gridArea, color, bgcolor, position, zIndex, top, right, bottom, left, width, maxWidth, minWidth, height, maxHeight, minHeight, sizeWidth, sizeHeight, fontFamily, fontSize, fontStyle, fontWeight, letterSpacing, lineHeight, textAlign */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28735,14 +28712,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 var styles = {
   root: {
     display: "flex",
-    flexGrow: 1,
-    flexShrink: 0,
     flexDirection: "row",
     flexWrap: "wrap",
-    width: "100%",
-    height: "100%",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    flexGrow: 1
   }
 };
 
@@ -28750,14 +28724,14 @@ var Index = function Index(props) {
   return __jsx(_components_MyLayout__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 18
     },
     __self: this
   }, __jsx("div", {
     style: styles.root,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 19
     },
     __self: this
   }, props.shows.map(function (show) {
@@ -28766,7 +28740,7 @@ var Index = function Index(props) {
       show: show,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24
+        lineNumber: 21
       },
       __self: this
     });
@@ -28816,7 +28790,7 @@ Index.getInitialProps = function _callee() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!******************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Ftema%2Fmy-app%2F123%2Fpages%2Findex.js ***!
   \******************************************************************************************************************/
@@ -28839,5 +28813,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

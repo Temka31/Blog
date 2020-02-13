@@ -6,10 +6,6 @@ import Listmenu from "./listMenu";
 
 const useStyles = makeStyles(theme => ({
   desktop: {
-    display: "flex",
-    flexShrink: 1,
-    width: "100%",
-    maxWidth: 300,
     minWidth: 200,
     backgroundColor: theme.palette.background.paper,
     "@media only screen and (max-width: 768px)": {
