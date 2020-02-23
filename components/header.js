@@ -5,6 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import TemporaryDrawer from './Drawer'
+import MenuIcon from "@material-ui/icons/Menu";
 
 const useStyles = makeStyles(theme => ({
 root:{
@@ -24,14 +25,16 @@ root:{
   },
 }));
 
-export default function Header() {
+export default function Header(props) {
   const classes = useStyles();
 
   return (
       <AppBar className={classes.root}>
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} >
-            <TemporaryDrawer />
+          <IconButton edge="start" className={classes.menuButton} onClick={props.toDoOpen} color="inherit">
+      
+            <MenuIcon />
+            
           </IconButton>
           <Typography variant="h6" className={classes.title}>
             News

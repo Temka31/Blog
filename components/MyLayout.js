@@ -2,6 +2,9 @@ import React from "react";
 import Sidebar from "./Sidebar";
 import Header from "./header";
 import Footer from "./footer";
+import { Drawer } from "@material-ui/core";
+import { useState } from "react";
+import TemporaryDrawer from "./Drawer";
 
 const styles = {
   root: {
@@ -17,7 +20,7 @@ const styles = {
     flexDirection: "row",
     flexWrap: "nowrap",
     flexGrow: 1,
-    height:"100%"
+    height: "100%"
   },
 
   content: {
@@ -27,9 +30,15 @@ const styles = {
 };
 
 export default function Layout(props) {
+  const [open, setOpen] = useState(false);
+  const toDoOpen = () => {
+    setOpen(!open);
+  };
+
   return (
     <div style={styles.root}>
-      <Header />
+      <Header toDoOpen={toDoOpen}/>
+      <TemporaryDrawer open={open} toDoOpen={toDoOpen}/>
       <div style={styles.main}>
         <Sidebar />
         <div style={styles.content}>

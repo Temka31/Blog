@@ -21,6 +21,9 @@ function ListItemLink(props) {
             <ListItemLink href="/about">
               <ListItemText primary="О нас" />
             </ListItemLink>
+            <ListItemLink href="/calc">
+              <ListItemText primary="Калькулятор" />
+            </ListItemLink>
           </List>
         
   
