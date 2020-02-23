@@ -3,7 +3,7 @@
 
 const styles = {
     root: {
-     width :"33%",
+     width :"30%",
      border: "solid",
      margin: "1px",
      height: "70px",
