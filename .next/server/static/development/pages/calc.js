@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -515,6 +515,7 @@ const styles = {
   root: {
     width: "33%",
     border: "solid",
+    margin: "1px",
     height: "70px"
   }
 };
@@ -524,7 +525,7 @@ function Knopka(props) {
     onClick: props.calc,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 15
     },
     __self: this
   }, props.number);
@@ -689,7 +690,13 @@ function About() {
       lineNumber: 28
     },
     __self: this
-  }, "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0447\u0438\u0441\u043B\u043E     ", result), __jsx("div", {
+  }, "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0447\u0438\u0441\u043B\u043E"), __jsx("output", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  }, result), __jsx("div", {
     style: styles.figures,
     __source: {
       fileName: _jsxFileName,
@@ -785,19 +792,11 @@ function About() {
     },
     __self: this
   }), __jsx(_components_knopka__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    number: "C",
-    calc: () => setResult(""),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42
-    },
-    __self: this
-  }), __jsx(_components_knopka__WEBPACK_IMPORTED_MODULE_1__["default"], {
     number: "+",
     calc: () => setResult(result + "+"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 42
     },
     __self: this
   }), __jsx(_components_knopka__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -805,7 +804,7 @@ function About() {
     calc: () => setResult(result + "-"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 43
     },
     __self: this
   }), __jsx(_components_knopka__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -813,12 +812,20 @@ function About() {
     calc: () => setResult(result + "/"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 44
     },
     __self: this
   }), __jsx(_components_knopka__WEBPACK_IMPORTED_MODULE_1__["default"], {
     number: "*",
     calc: () => setResult(result + "*"),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: this
+  }), __jsx(_components_knopka__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    number: "C",
+    calc: () => setResult(""),
     __source: {
       fileName: _jsxFileName,
       lineNumber: 46
@@ -829,7 +836,7 @@ function About() {
 
 /***/ }),
 
-/***/ 7:
+/***/ 3:
 /*!*****************************!*\
   !*** multi ./pages/calc.js ***!
   \*****************************/

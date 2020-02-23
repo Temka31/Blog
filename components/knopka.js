@@ -5,6 +5,7 @@ const styles = {
     root: {
      width :"33%",
      border: "solid",
+     margin: "1px",
      height: "70px",
     },
 }

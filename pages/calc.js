@@ -25,8 +25,8 @@ export default function About() {
   return (
     <Layout>
       <div style={styles.root}>
-        <p>Введите число     {result}</p>
-        
+        <p>Введите число</p>
+        <output>{result}</output>
         <div style={styles.figures}>
         <Knopka number={"1"} calc={()=>calc(result + "1")}/>
         <Knopka number={"2"} calc={()=>setResult(result + "2")}/>
@@ -39,11 +39,11 @@ export default function About() {
         <Knopka number={"9"} calc={()=>setResult(result + "9")}/>
         <Knopka number={"0"} calc={()=>setResult(result + "0")}/>
         <Knopka number={"="} calc={()=>setResult(eval(result))}/>
-        <Knopka number={"C"} calc={()=>setResult("")}/>
         <Knopka number={"+"} calc={()=>setResult(result + "+")}/>
         <Knopka number={"-"} calc={()=>setResult(result + "-")}/>
         <Knopka number={"/"} calc={()=>setResult(result + "/")}/>
         <Knopka number={"*"} calc={()=>setResult(result + "*")}/>
+        <Knopka number={"C"} calc={()=>setResult("")}/>
         </div>
       </div>
     </Layout>

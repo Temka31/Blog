@@ -415,6 +415,7 @@ var styles = {
   root: {
     width: "33%",
     border: "solid",
+    margin: "1px",
     height: "70px"
   }
 };
@@ -424,7 +425,7 @@ function Knopka(props) {
     onClick: props.calc,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 15
     },
     __self: this
   }, props.number);
@@ -49692,7 +49693,13 @@ function About() {
       lineNumber: 28
     },
     __self: this
-  }, "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0447\u0438\u0441\u043B\u043E     ", result), __jsx("div", {
+  }, "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0447\u0438\u0441\u043B\u043E"), __jsx("output", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  }, result), __jsx("div", {
     style: styles.figures,
     __source: {
       fileName: _jsxFileName,
@@ -49810,23 +49817,13 @@ function About() {
     },
     __self: this
   }), __jsx(_components_knopka__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    number: "C",
-    calc: function calc() {
-      return setResult("");
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42
-    },
-    __self: this
-  }), __jsx(_components_knopka__WEBPACK_IMPORTED_MODULE_1__["default"], {
     number: "+",
     calc: function calc() {
       return setResult(result + "+");
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 42
     },
     __self: this
   }), __jsx(_components_knopka__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -49836,7 +49833,7 @@ function About() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 43
     },
     __self: this
   }), __jsx(_components_knopka__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -49846,13 +49843,23 @@ function About() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 44
     },
     __self: this
   }), __jsx(_components_knopka__WEBPACK_IMPORTED_MODULE_1__["default"], {
     number: "*",
     calc: function calc() {
       return setResult(result + "*");
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: this
+  }), __jsx(_components_knopka__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    number: "C",
+    calc: function calc() {
+      return setResult("");
     },
     __source: {
       fileName: _jsxFileName,
@@ -49864,7 +49871,7 @@ function About() {
 
 /***/ }),
 
-/***/ 5:
+/***/ 1:
 /*!*********************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fcalc&absolutePagePath=%2FUsers%2Ftema%2Fmy-app%2F123%2Fpages%2Fcalc.js ***!
   \*********************************************************************************************************************/
@@ -49887,5 +49894,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=calc.js.map
