@@ -4,15 +4,16 @@
 const styles = {
     root: {
      width :"33%",
-     border: "1px",
+     border: "solid",
+     height: "70px",
     },
 }
 
 export default function Knopka(props) {
 return(
-<div style={styles.root}>
+<button style={styles.root} onClick={props.calc}>
 {props.number}
-</div>
+</button>
 
 )
 
