@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -513,7 +513,7 @@ var _jsxFileName = "/Users/tema/my-app/123/components/knopka.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const styles = {
   root: {
-    width: "33%",
+    width: "30%",
     border: "solid",
     margin: "1px",
     height: "70px"
@@ -831,12 +831,20 @@ function About() {
       lineNumber: 46
     },
     __self: this
+  }), __jsx(_components_knopka__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    number: "<",
+    calc: () => setResult(result.substring(0, result.length - 1)),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
+    },
+    __self: this
   }))));
 }
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!*****************************!*\
   !*** multi ./pages/calc.js ***!
   \*****************************/

@@ -413,7 +413,7 @@ var _jsxFileName = "/Users/tema/my-app/123/components/knopka.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var styles = {
   root: {
-    width: "33%",
+    width: "30%",
     border: "solid",
     margin: "1px",
     height: "70px"
@@ -31904,7 +31904,7 @@ var yellow = {
 /*!*****************************************************!*\
   !*** ./node_modules/@material-ui/core/esm/index.js ***!
   \*****************************************************/
-/*! exports provided: colors, hexToRgb, rgbToHex, hslToRgb, decomposeColor, recomposeColor, getContrastRatio, getLuminance, emphasize, fade, darken, lighten, createMuiTheme, createStyles, makeStyles, responsiveFontSizes, styled, easing, duration, useTheme, withStyles, withTheme, createGenerateClassName, jssPreset, ServerStyleSheets, StylesProvider, MuiThemeProvider, ThemeProvider, AppBar, Avatar, Backdrop, Badge, BottomNavigation, BottomNavigationAction, Box, styleFunction, Breadcrumbs, Button, ButtonBase, ButtonGroup, Card, CardActionArea, CardActions, CardContent, CardHeader, CardMedia, Checkbox, Chip, CircularProgress, ClickAwayListener, Collapse, Container, CssBaseline, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Divider, Drawer, ExpansionPanel, ExpansionPanelActions, ExpansionPanelDetails, ExpansionPanelSummary, Fab, Fade, FilledInput, FormControl, useFormControl, FormControlLabel, FormGroup, FormHelperText, FormLabel, Grid, GridList, GridListTile, GridListTileBar, Grow, Hidden, Icon, IconButton, Input, InputAdornment, InputBase, InputLabel, LinearProgress, Link, List, ListItem, ListItemAvatar, ListItemIcon, ListItemSecondaryAction, ListItemText, ListSubheader, Menu, MenuItem, MenuList, MobileStepper, Modal, ModalManager, NativeSelect, NoSsr, OutlinedInput, Paper, Popover, Popper, Portal, Radio, RadioGroup, useRadioGroup, RootRef, Select, Slide, Slider, Snackbar, SnackbarContent, Step, StepButton, StepConnector, StepContent, StepIcon, StepLabel, Stepper, SvgIcon, SwipeableDrawer, Switch, Tab, Table, TableBody, TableCell, TableContainer, TableFooter, TableHead, TablePagination, TableRow, TableSortLabel, Tabs, TextField, TextareaAutosize, Toolbar, Tooltip, Typography, useMediaQuery, useScrollTrigger, withMobileDialog, withWidth, Zoom, isWidthUp, isWidthDown */
+/*! exports provided: colors, hexToRgb, rgbToHex, hslToRgb, decomposeColor, recomposeColor, getContrastRatio, getLuminance, emphasize, fade, darken, lighten, createMuiTheme, createStyles, makeStyles, responsiveFontSizes, styled, easing, duration, useTheme, withStyles, withTheme, createGenerateClassName, jssPreset, ServerStyleSheets, StylesProvider, MuiThemeProvider, ThemeProvider, AppBar, Avatar, Backdrop, Badge, BottomNavigation, BottomNavigationAction, Box, Breadcrumbs, Button, ButtonBase, ButtonGroup, Card, CardActionArea, CardActions, CardContent, CardHeader, CardMedia, Checkbox, Chip, CircularProgress, ClickAwayListener, Collapse, Container, CssBaseline, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Divider, Drawer, ExpansionPanel, ExpansionPanelActions, ExpansionPanelDetails, ExpansionPanelSummary, Fab, Fade, FilledInput, FormControl, FormControlLabel, FormGroup, FormHelperText, FormLabel, Grid, GridList, GridListTile, GridListTileBar, Grow, Hidden, Icon, IconButton, Input, InputAdornment, InputBase, InputLabel, LinearProgress, Link, List, ListItem, ListItemAvatar, ListItemIcon, ListItemSecondaryAction, ListItemText, ListSubheader, Menu, MenuItem, MenuList, MobileStepper, Modal, NativeSelect, NoSsr, OutlinedInput, Paper, Popover, Popper, Portal, Radio, RadioGroup, RootRef, Select, Slide, Slider, Snackbar, SnackbarContent, Step, StepButton, StepConnector, StepContent, StepIcon, StepLabel, Stepper, SvgIcon, SwipeableDrawer, Switch, Tab, Table, TableBody, TableCell, TableContainer, TableFooter, TableHead, TablePagination, TableRow, TableSortLabel, Tabs, TextField, TextareaAutosize, Toolbar, Tooltip, Typography, useMediaQuery, useScrollTrigger, withMobileDialog, withWidth, Zoom, styleFunction, useFormControl, ModalManager, useRadioGroup, isWidthUp, isWidthDown */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -38251,7 +38251,7 @@ var grid = Object(_compose__WEBPACK_IMPORTED_MODULE_1__["default"])(gridGap, gri
 /*!*******************************************************!*\
   !*** ./node_modules/@material-ui/system/esm/index.js ***!
   \*******************************************************/
-/*! exports provided: borders, border, borderTop, borderRight, borderBottom, borderLeft, borderColor, borderRadius, breakpoints, compose, css, display, flexbox, flexBasis, flexDirection, flexWrap, justifyContent, alignItems, alignContent, order, flex, flexGrow, flexShrink, alignSelf, justifyItems, justifySelf, grid, gridGap, gridColumnGap, gridRowGap, gridColumn, gridRow, gridAutoFlow, gridAutoColumns, gridAutoRows, gridTemplateColumns, gridTemplateRows, gridTemplateAreas, gridArea, palette, color, bgcolor, positions, position, zIndex, top, right, bottom, left, shadows, sizing, width, maxWidth, minWidth, height, maxHeight, minHeight, sizeWidth, sizeHeight, spacing, style, typography, fontFamily, fontSize, fontStyle, fontWeight, letterSpacing, lineHeight, textAlign */
+/*! exports provided: borders, breakpoints, compose, css, display, flexbox, grid, palette, positions, shadows, sizing, spacing, style, typography, border, borderTop, borderRight, borderBottom, borderLeft, borderColor, borderRadius, flexBasis, flexDirection, flexWrap, justifyContent, alignItems, alignContent, order, flex, flexGrow, flexShrink, alignSelf, justifyItems, justifySelf, gridGap, gridColumnGap, gridRowGap, gridColumn, gridRow, gridAutoFlow, gridAutoColumns, gridAutoRows, gridTemplateColumns, gridTemplateRows, gridTemplateAreas, gridArea, color, bgcolor, position, zIndex, top, right, bottom, left, width, maxWidth, minWidth, height, maxHeight, minHeight, sizeWidth, sizeHeight, fontFamily, fontSize, fontStyle, fontWeight, letterSpacing, lineHeight, textAlign */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49866,12 +49866,22 @@ function About() {
       lineNumber: 46
     },
     __self: this
+  }), __jsx(_components_knopka__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    number: "<",
+    calc: function calc() {
+      return setResult(result.substring(0, result.length - 1));
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
+    },
+    __self: this
   }))));
 }
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!*********************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fcalc&absolutePagePath=%2FUsers%2Ftema%2Fmy-app%2F123%2Fpages%2Fcalc.js ***!
   \*********************************************************************************************************************/
@@ -49894,5 +49904,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=calc.js.map

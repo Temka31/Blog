@@ -44,6 +44,7 @@ export default function About() {
         <Knopka number={"/"} calc={()=>setResult(result + "/")}/>
         <Knopka number={"*"} calc={()=>setResult(result + "*")}/>
         <Knopka number={"C"} calc={()=>setResult("")}/>
+        <Knopka number={"<"} calc={()=>setResult(result.substring(0, result.length-1))}/>
         </div>
       </div>
     </Layout>
